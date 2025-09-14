@@ -1,5 +1,5 @@
 """
-COMP-5710 Exercise 1: Prompt Engineering (Google Gemini)
+COMP-5710 Workshop 1: Prompt Engineering (Google Gemini)
 Author: Jacob Murrah
 Date: 09/12/2025
 """
