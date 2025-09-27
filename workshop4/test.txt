@@ -1,0 +1,15 @@
+....................................................F...................................................................
+======================================================================
+FAIL: test_ansible_http (security.ansible.test_security.TestSecurity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/jacob/Projects/GLITCH/glitch/tests/security/ansible/test_security.py", line 24, in test_ansible_http
+    self.__help_test(
+  File "/mnt/c/Users/jacob/Projects/GLITCH/glitch/tests/security/ansible/test_security.py", line 18, in __help_test
+    self.assertEqual(len(errors), n_errors)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 120 tests in 4.769s
+
+FAILED (failures=1)
