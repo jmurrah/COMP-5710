@@ -1,0 +1,14 @@
+Admin by default: 53
+Empty password: 57
+Full permission to the filesystem: 5
+Hard-coded password: 95
+Hard-coded secret: 679
+Hard-coded user: 312
+Invalid IP address binding: 30
+Missing default case statement: 240
+No integrity check: 0
+Suspicious comment: 262
+Use of HTTP without TLS: 39
+Use of obsolete command or function: 18
+Weak Crypto Algorithm: 26
+Combined: 1816
