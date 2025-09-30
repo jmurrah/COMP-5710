@@ -1,0 +1,20 @@
+"""
+COMP-5710 Workshop 6: Data Flow Analysis (data structure usage)
+Author: Jacob Murrah
+Date: 10/14/2025
+"""
+
+- AST (abstract syntax tree)
+    ast.parse builds an ast.Module tree whose nested nodes (FunctionDef, Assign, Call, Name, BinOp, etc.) capture the structure of calc.py; the analyzer walks and inspects these nodes to understand control and data flow.
+
+- dictionaries
+    assignment_map, module_env, and other env dictionaries map scope or variable names to AST nodes or evaluated values, letting the analyzer resolve assignments and evaluate expressions.
+
+- lists
+    flow_nodes, argument collections, and branch flows keep ordered sequences of values, parameter names, and tainted updates so the final trace (1000->val1->v1->res) comes out in the right order.
+
+- sets
+    tainted_names and related sets track which identifiers currently carry the traced value during function analysis, enabling quick membership checks while propagating taint through assignments and returns.
+
+- tuples
+    Helper utilities like _assignment_pairs and _process_function_statement use tuples to package related data (e.g., (target, value_node) or (additions, returned)) when iterating over assignments and control-flow results.
