@@ -1,3 +1,9 @@
+"""
+COMP-5710 Workshop 5: Bandit
+Author: Jacob Murrah
+Date: 10/06/2025
+"""
+
 Bug: (B101 assert_used) [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
 Count: 30
 
