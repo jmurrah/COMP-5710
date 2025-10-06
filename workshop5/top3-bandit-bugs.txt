@@ -1,8 +1,8 @@
-Bug: assert_used
+Bug: [B101:assert_used]
 Count: 30
 
-Bug: blacklist
-Count: 10
+Bug: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+Count: 7
 
-Bug: pytorch_load
+Bug: [B614:pytorch_load] Use of unsafe PyTorch load
 Count: 5
