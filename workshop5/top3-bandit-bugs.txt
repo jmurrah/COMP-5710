@@ -1,8 +1,8 @@
-Bug: [B101:assert_used]
+Bug: (B101 assert_used) [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
 Count: 30
 
-Bug: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+Bug: (B311 random) [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
 Count: 7
 
-Bug: [B614:pytorch_load] Use of unsafe PyTorch load
+Bug: (B614 pytorch_load) [B614:pytorch_load] Use of unsafe PyTorch load
 Count: 5
