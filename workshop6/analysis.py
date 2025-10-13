@@ -2,7 +2,7 @@
 COMP-5710 Workshop 6: Data Flow Analysis (code)
 Author: Jacob Murrah
 Date: 10/14/2025
-NOTE: See data-structure-usage.txt for data structure usage details.
+NOTE: See data-structure-usage.txt for data structure usage/location details.
 """
 
 import ast
