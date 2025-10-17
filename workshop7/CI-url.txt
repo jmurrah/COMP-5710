@@ -1,0 +1,11 @@
+"""
+COMP-5710 Workshop 7: Codacy
+Author: Jacob Murrah
+Date: 10/20/2025
+"""
+
+GitHub Actions Codacy run URL:
+https://github.com/jmurrah/IaCTesting/actions/runs/18595534953
+
+URL for the specific Codacy Analysis CLI job:
+https://github.com/jmurrah/IaCTesting/actions/runs/18595534953/job/53020702201
