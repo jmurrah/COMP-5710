@@ -1,3 +1,10 @@
+"""
+COMP-5710 Workshop 8: Forensics
+Author: Jacob Murrah
+Date: 10/27/2025
+"""
+
+
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import datasets, linear_model
 import pandas as pd
@@ -14,8 +21,8 @@ def readData():
     # Security log 1/20: Track dataset ingestion attempt to tie resource access to Dolly's identity realm.
     logger.info(
         "Starting Iris dataset ingestion for Dolly",
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="DataLoader",
         status="START",
@@ -31,24 +38,36 @@ def readData():
     print(df.head())
 
     # Security log 2/20: Confirm dataset shape so resource tampering causing poison-sized changes is auditable.
-    logger.info(
-        "Iris dataset loaded with %d samples and %d features",
-        iris.data.shape[0],
-        iris.data.shape[1],
-        user="dolly",
-        realm="AuburnSSO",
-        system="MLPipeline",
-        component="DataLoader",
-        status="SUCCESS",
-        context="DatasetRead",
-        source="sklearn.datasets",
-    )
+    try:
+        logger.info(
+            "Iris dataset loaded with %d samples and %d features",
+            iris.data.shape[0],
+            iris.data.shape[1],
+            user="Dolly",
+            realm="Auburn",
+            system="MLPipeline",
+            component="DataLoader",
+            status="SUCCESS",
+            context="DatasetRead",
+            source="sklearn.datasets",
+        )
+    except Exception:
+        logger.exception(
+            "Iris dataset shape log failed, resource integrity check incomplete",
+            user="Dolly",
+            realm="Auburn",
+            system="MLPipeline",
+            component="DataLoader",
+            status="LOG_FAILURE",
+            context="DatasetRead",
+            source="sklearn.datasets",
+        )
     # Security log 3/20: Persist preview of fields to detect unexpected schema shifts from compromised files.
     logger.info(
         "Iris feature preview snapshot=%s",
         df.head(1).to_dict(),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="DataLoader",
         status="PROFILED",
@@ -59,8 +78,8 @@ def readData():
     logger.info(
         "Iris NaN scan flagged=%s",
         bool(np.isnan(X).any()),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="DataLoader",
         status="VALIDATION_ALERT" if np.isnan(X).any() else "VALIDATED",
@@ -71,8 +90,8 @@ def readData():
     logger.info(
         "Iris duplicated rows detected=%d",
         int(df.duplicated().sum()),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="DataLoader",
         status="ANOMALY" if df.duplicated().any() else "VERIFIED",
@@ -87,8 +106,8 @@ def makePrediction():
     # Security log 6/20: Log classifier pipeline start with component context for accountability.
     logger.info(
         "Beginning KNN training sequence on Iris dataset",
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="KNNModel",
         status="START",
@@ -102,8 +121,8 @@ def makePrediction():
     logger.info(
         "Observed Iris class distribution=%s",
         np.bincount(iris["target"]).tolist(),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="KNNModel",
         status="PROFILED",
@@ -112,21 +131,33 @@ def makePrediction():
     )
     knn.fit(iris["data"], iris["target"])
     # Security log 8/20: Record training accuracy to surface model tricking symptoms.
-    logger.info(
-        "KNN training accuracy=%.4f",
-        knn.score(iris["data"], iris["target"]),
-        user="dolly",
-        realm="AuburnSSO",
-        system="MLPipeline",
-        component="KNNModel",
-        status=(
-            "PREDICT_RISK"
-            if knn.score(iris["data"], iris["target"]) < 0.9
-            else "TRAINED"
-        ),
-        context="ModelTraining",
-        source="cpu",
-    )
+    try:
+        logger.info(
+            "KNN training accuracy=%.4f",
+            knn.score(iris["data"], iris["target"]),
+            user="Dolly",
+            realm="Auburn",
+            system="MLPipeline",
+            component="KNNModel",
+            status=(
+                "PREDICT_RISK"
+                if knn.score(iris["data"], iris["target"]) < 0.9
+                else "TRAINED"
+            ),
+            context="ModelTraining",
+            source="cpu",
+        )
+    except Exception:
+        logger.exception(
+            "KNN accuracy logging failed, exception masks model tricking detection",
+            user="Dolly",
+            realm="Auburn",
+            system="MLPipeline",
+            component="KNNModel",
+            status="LOG_FAILURE",
+            context="ModelTraining",
+            source="cpu",
+        )
     X = [
         [5.9, 1.0, 5.1, 1.8],
         [3.4, 2.0, 1.1, 4.8],
@@ -135,8 +166,8 @@ def makePrediction():
     logger.info(
         "Executing KNN inference on %d samples",
         len(X),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="KNNModel",
         status="INFERENCE_START",
@@ -150,8 +181,8 @@ def makePrediction():
         "KNN predictions=%s unique_classes=%s",
         prediction.tolist(),
         np.unique(prediction).tolist(),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="KNNModel",
         status=(
@@ -166,8 +197,8 @@ def doRegression():
     # Security log 11/20: Note diabetes regression pipeline start to correlate with initiating realm.
     logger.info(
         "Starting linear regression workflow on Diabetes dataset",
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="LinearRegressionModel",
         status="START",
@@ -181,8 +212,8 @@ def doRegression():
         "Diabetes dataset samples=%d features=%d",
         diabetes.data.shape[0],
         diabetes.data.shape[1],
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="LinearRegressionModel",
         status="SUCCESS",
@@ -199,8 +230,8 @@ def doRegression():
         "Diabetes training target mean=%.4f std=%.4f",
         diabetes_y_train.mean(),
         diabetes_y_train.std(),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="LinearRegressionModel",
         status="PROFILED",
@@ -213,8 +244,8 @@ def doRegression():
     logger.info(
         "Linear regression coefficient=%s",
         regr.coef_.tolist(),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="LinearRegressionModel",
         status="COEFF_ALERT" if np.any(np.abs(regr.coef_) > 500) else "TRAINED",
@@ -226,8 +257,8 @@ def doRegression():
     logger.info(
         "Linear regression test MSE=%.4f",
         np.mean((diabetes_y_pred - diabetes_y_test) ** 2),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="LinearRegressionModel",
         status=(
@@ -244,8 +275,8 @@ def doDeepLearning():
     # Security log 16/20: Document CNN workflow kickoff across distributed MNIST source.
     logger.info(
         "Initializing CNN training workflow on MNIST dataset",
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="CNNModel",
         status="START",
@@ -262,8 +293,8 @@ def doDeepLearning():
         "MNIST raw shapes train=%s test=%s",
         tuple(train_images.shape),
         tuple(test_images.shape),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="CNNModel",
         status="PROFILED",
@@ -281,8 +312,8 @@ def doDeepLearning():
         float(train_images.max()),
         float(test_images.min()),
         float(test_images.max()),
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="CNNModel",
         status="NORMALIZED",
@@ -294,18 +325,30 @@ def doDeepLearning():
     test_images = np.expand_dims(test_images, axis=3)
 
     # Security log 19/20: Log tensor reshape outcome to trace preprocessing change issues.
-    logger.info(
-        "MNIST tensor shapes after expand_dims train=%s test=%s",
-        tuple(train_images.shape),
-        tuple(test_images.shape),
-        user="dolly",
-        realm="AuburnSSO",
-        system="MLPipeline",
-        component="CNNModel",
-        status="PREPROCESSED",
-        context="DataPreparation",
-        source="cpu",
-    )
+    try:
+        logger.info(
+            "MNIST tensor shapes after expand_dims train=%s test=%s",
+            tuple(train_images.shape),
+            tuple(test_images.shape),
+            user="Dolly",
+            realm="Auburn",
+            system="MLPipeline",
+            component="CNNModel",
+            status="PREPROCESSED",
+            context="DataPreparation",
+            source="cpu",
+        )
+    except Exception:
+        logger.exception(
+            "MNIST tensor reshape logging failed, change tracking visibility reduced",
+            user="Dolly",
+            realm="Auburn",
+            system="MLPipeline",
+            component="CNNModel",
+            status="LOG_FAILURE",
+            context="DataPreparation",
+            source="cpu",
+        )
 
     num_filters = 8
     filter_size = 3
@@ -326,8 +369,8 @@ def doDeepLearning():
         "adam",
         "categorical_crossentropy",
         ["accuracy"],
-        user="dolly",
-        realm="AuburnSSO",
+        user="Dolly",
+        realm="Auburn",
         system="MLPipeline",
         component="CNNModel",
         status="COMPILED",
