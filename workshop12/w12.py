@@ -44,7 +44,7 @@ def run_bandit_case(id, pair) -> dict[str, str]:
     }
 
     RESULTS_DIR.mkdir(exist_ok=True)
-    (RESULTS_DIR / f"case_{id}.txt").write_text(
+    (RESULTS_DIR / f"pair_{id}.txt").write_text(
         "\n".join(
             [
                 f"CASE {id}",

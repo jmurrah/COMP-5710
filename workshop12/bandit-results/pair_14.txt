@@ -3,7 +3,7 @@ Command : bandit -r detr-main -a vuln -l -i -f yaml
 Return  : 1
 --- STDOUT ---
 errors: []
-generated_at: '2025-11-10T03:02:04Z'
+generated_at: '2025-11-10T03:05:04Z'
 metrics:
   _totals:
     CONFIDENCE.HIGH: 49

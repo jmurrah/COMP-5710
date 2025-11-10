@@ -1,10 +1,10 @@
-CASE 4
-Command : bandit -r detr-main -a file -ll -iii -f json
-Return  : 1
+CASE 19
+Command : bandit -r detr-main -a file -lll -ii -f json
+Return  : 0
 --- STDOUT ---
 {
   "errors": [],
-  "generated_at": "2025-11-10T03:02:00Z",
+  "generated_at": "2025-11-10T03:05:05Z",
   "metrics": {
     "_totals": {
       "CONFIDENCE.HIGH": 49,
@@ -384,130 +384,7 @@ Return  : 1
       "skipped_tests": 0
     }
   },
-  "results": [
-    {
-      "code": "47     else:\n48         checkpoint = torch.load(args.source_model, map_location=\"cpu\")\n49     model_to_convert = checkpoint[\"model\"]\n",
-      "col_offset": 21,
-      "end_col_offset": 70,
-      "filename": "detr-main/d2/converter.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 48,
-      "line_range": [
-        48
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
-      "test_id": "B614",
-      "test_name": "pytorch_load"
-    },
-    {
-      "code": "126                 print(\"LOAD pre-trained weights\")\n127                 weight = torch.load(\n128                     frozen_weights, map_location=lambda storage, loc: storage\n129                 )[\"model\"]\n130                 new_weight = {}\n",
-      "col_offset": 25,
-      "end_col_offset": 17,
-      "filename": "detr-main/d2/detr/detr.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 127,
-      "line_range": [
-        127,
-        128,
-        129
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
-      "test_id": "B614",
-      "test_name": "pytorch_load"
-    },
-    {
-      "code": "257     if args.frozen_weights is not None:\n258         checkpoint = torch.load(args.frozen_weights, map_location=\"cpu\")\n259         model_without_ddp.detr.load_state_dict(checkpoint[\"model\"])\n",
-      "col_offset": 21,
-      "end_col_offset": 72,
-      "filename": "detr-main/main.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 258,
-      "line_range": [
-        258
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
-      "test_id": "B614",
-      "test_name": "pytorch_load"
-    },
-    {
-      "code": "267         else:\n268             checkpoint = torch.load(args.resume, map_location=\"cpu\")\n269         model_without_ddp.load_state_dict(checkpoint[\"model\"])\n",
-      "col_offset": 25,
-      "end_col_offset": 68,
-      "filename": "detr-main/main.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 268,
-      "line_range": [
-        268
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
-      "test_id": "B614",
-      "test_name": "pytorch_load"
-    },
-    {
-      "code": "130         buffer = tensor.cpu().numpy().tobytes()[:size]\n131         data_list.append(pickle.loads(buffer))\n132 \n",
-      "col_offset": 25,
-      "end_col_offset": 45,
-      "filename": "detr-main/util/misc.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
-      "line_number": 131,
-      "line_range": [
-        131
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle",
-      "test_id": "B301",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "102     ):\n103         data = torch.load(f)\n104         # precision is n_iou, n_points, n_cat, n_area, max_det\n",
-      "col_offset": 15,
-      "end_col_offset": 28,
-      "filename": "detr-main/util/plot_utils.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 103,
-      "line_range": [
-        103
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
-      "test_id": "B614",
-      "test_name": "pytorch_load"
-    }
-  ]
+  "results": []
 }
 --- STDERR ---
 [main]	INFO	profile include tests: None

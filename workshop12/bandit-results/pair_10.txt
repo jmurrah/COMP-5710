@@ -1,17 +1,18 @@
-CASE 8
-Command : bandit -r detr-main -a file -lll -i -f screen
+CASE 10
+Command : bandit -r detr-main -a vuln -lll -ii -f txt
 Return  : 0
 --- STDOUT ---
-[95mRun started:2025-11-10 03:02:02.028149[0m
-[95m
-Test results:[0m
+Run started:2025-11-10 03:05:02.727011
+
+Test results:
 	No issues identified.
-[95m
-Code scanned:[0m
+
+Code scanned:
 	Total lines of code: 4070
 	Total lines skipped (#nosec): 0
-[95m
-Run metrics:[0m
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
 	Total issues (by severity):
 		Undefined: 0
 		Low: 43
@@ -22,7 +23,7 @@ Run metrics:[0m
 		Low: 0
 		Medium: 0
 		High: 49
-[95mFiles skipped (0):[0m
+Files skipped (0):
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None
