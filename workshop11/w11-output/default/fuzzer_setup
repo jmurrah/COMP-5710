@@ -1,0 +1,6 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=./w11
+AFL_CUSTOM_INFO_PROGRAM_ARGV=
+AFL_CUSTOM_INFO_OUT=w11-output/default
+# command line:
+'afl-fuzz' '-i' '../fuzzing-inputs' '-t' '10000' '-o' 'w11-output' './w11'

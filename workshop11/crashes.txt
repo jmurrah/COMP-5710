@@ -1,0 +1,8 @@
+"""
+COMP-5710 Workshop 11: Greybox Fuzzing with AFL++
+Author: Jacob Murrah
+Date: 11/14/2025
+"""
+
+Number of crashes (saved crashes): 0
+Number of hangs (saved hangs): 0
