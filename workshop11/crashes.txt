@@ -6,3 +6,5 @@ Date: 11/14/2025
 
 Number of crashes (saved crashes): 0
 Number of hangs (saved hangs): 0
+
+NOTE: The results make sense because the w11.c file does not take in ANY input.
