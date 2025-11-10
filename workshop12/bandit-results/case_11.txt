@@ -1,0 +1,19 @@
+CASE 11
+Command : bandit -r detr-main -a file -l -ll -i -lll -f txt
+Return  : 1
+--- STDOUT ---
+
+--- STDERR ---
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.9
+Traceback (most recent call last):
+  File "/home/jmurrah/miniconda3/bin/bandit", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py", line 676, in main
+    sev_level = constants.RANKING[args.severity - 1]
+                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range

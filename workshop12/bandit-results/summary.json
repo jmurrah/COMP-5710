@@ -1,0 +1,652 @@
+[
+  {
+    "id": 0,
+    "flags": [
+      "file",
+      "-l",
+      "-l",
+      "csv"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-l",
+      "-i",
+      "-l",
+      "-f",
+      "csv"
+    ],
+    "returncode": 0,
+    "stdout": "filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info\n",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\n"
+  },
+  {
+    "id": 1,
+    "flags": [
+      "vuln",
+      "-ll",
+      "-ll",
+      "csv"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-ll",
+      "-i",
+      "-ll",
+      "-f",
+      "csv"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 2,
+    "flags": [
+      "vuln",
+      "-lll",
+      "-lll",
+      "custom"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-lll",
+      "-i",
+      "-lll",
+      "-f",
+      "custom"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 3,
+    "flags": [
+      "file",
+      "-lll",
+      "-ll",
+      "html"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-ll",
+      "-f",
+      "html"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 4,
+    "flags": [
+      "file",
+      "-ll",
+      "-lll",
+      "json"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-lll",
+      "-f",
+      "json"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 5,
+    "flags": [
+      "vuln",
+      "-l",
+      "-l",
+      "json"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-l",
+      "-i",
+      "-l",
+      "-f",
+      "json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"errors\": [],\n  \"generated_at\": \"2025-11-10T02:58:54Z\",\n  \"metrics\": {\n    \"_totals\": {\n      \"CONFIDENCE.HIGH\": 49,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 43,\n      \"SEVERITY.MEDIUM\": 6,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 4070,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/d2/converter.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 1,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 68,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/d2/detr/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 3,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/d2/detr/config.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 22,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/d2/detr/dataset_mapper.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 100,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/d2/detr/detr.py\": {\n      \"CONFIDENCE.HIGH\": 4,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 3,\n      \"SEVERITY.MEDIUM\": 1,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 250,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/d2/train_net.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 126,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/datasets/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 16,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/datasets/coco.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 134,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/datasets/coco_eval.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 198,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/datasets/coco_panoptic.py\": {\n      \"CONFIDENCE.HIGH\": 3,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 3,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 94,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/datasets/panoptic_eval.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 40,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/datasets/transforms.py\": {\n      \"CONFIDENCE.HIGH\": 8,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 8,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 208,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/engine.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 153,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/hubconf.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 152,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/main.py\": {\n      \"CONFIDENCE.HIGH\": 3,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 2,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 325,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 3,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/backbone.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 125,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/detr.py\": {\n      \"CONFIDENCE.HIGH\": 7,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 7,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 332,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/matcher.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 82,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/position_encoding.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 1,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 88,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/segmentation.py\": {\n      \"CONFIDENCE.HIGH\": 5,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 5,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 345,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/models/transformer.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 338,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/run_with_submitit.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 91,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/test_all.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 214,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/util/__init__.py\": {\n      \"CONFIDENCE.HIGH\": 0,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 0,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/util/box_ops.py\": {\n      \"CONFIDENCE.HIGH\": 2,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 2,\n      \"SEVERITY.MEDIUM\": 0,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 56,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/util/misc.py\": {\n      \"CONFIDENCE.HIGH\": 9,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 8,\n      \"SEVERITY.MEDIUM\": 1,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 405,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    },\n    \"detr-main/util/plot_utils.py\": {\n      \"CONFIDENCE.HIGH\": 1,\n      \"CONFIDENCE.LOW\": 0,\n      \"CONFIDENCE.MEDIUM\": 0,\n      \"CONFIDENCE.UNDEFINED\": 0,\n      \"SEVERITY.HIGH\": 0,\n      \"SEVERITY.LOW\": 0,\n      \"SEVERITY.MEDIUM\": 1,\n      \"SEVERITY.UNDEFINED\": 0,\n      \"loc\": 102,\n      \"nosec\": 0,\n      \"skipped_tests\": 0\n    }\n  },\n  \"results\": []\n}",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n"
+  },
+  {
+    "id": 6,
+    "flags": [
+      "vuln",
+      "-l",
+      "-lll",
+      "html"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-l",
+      "-i",
+      "-lll",
+      "-f",
+      "html"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 7,
+    "flags": [
+      "file",
+      "-ll",
+      "-l",
+      "custom"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-l",
+      "-f",
+      "custom"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 8,
+    "flags": [
+      "file",
+      "-lll",
+      "-l",
+      "screen"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-l",
+      "-f",
+      "screen"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 9,
+    "flags": [
+      "vuln",
+      "-l",
+      "-ll",
+      "screen"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-l",
+      "-i",
+      "-ll",
+      "-f",
+      "screen"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 10,
+    "flags": [
+      "vuln",
+      "-lll",
+      "-ll",
+      "txt"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-lll",
+      "-i",
+      "-ll",
+      "-f",
+      "txt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 11,
+    "flags": [
+      "file",
+      "-ll",
+      "-lll",
+      "txt"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-lll",
+      "-f",
+      "txt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 12,
+    "flags": [
+      "file",
+      "-ll",
+      "-lll",
+      "xml"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-lll",
+      "-f",
+      "xml"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 13,
+    "flags": [
+      "vuln",
+      "-lll",
+      "-ll",
+      "xml"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-lll",
+      "-i",
+      "-ll",
+      "-f",
+      "xml"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 14,
+    "flags": [
+      "vuln",
+      "-l",
+      "-l",
+      "yaml"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "vuln",
+      "-l",
+      "-l",
+      "-i",
+      "-l",
+      "-f",
+      "yaml"
+    ],
+    "returncode": 0,
+    "stdout": "errors: []\ngenerated_at: '2025-11-10T02:58:58Z'\nmetrics:\n  _totals:\n    CONFIDENCE.HIGH: 49\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 43\n    SEVERITY.MEDIUM: 6\n    SEVERITY.UNDEFINED: 0\n    loc: 4070\n    nosec: 0\n    skipped_tests: 0\n  detr-main/d2/converter.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 1\n    SEVERITY.UNDEFINED: 0\n    loc: 68\n    nosec: 0\n    skipped_tests: 0\n  detr-main/d2/detr/__init__.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 3\n    nosec: 0\n    skipped_tests: 0\n  detr-main/d2/detr/config.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 22\n    nosec: 0\n    skipped_tests: 0\n  detr-main/d2/detr/dataset_mapper.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 100\n    nosec: 0\n    skipped_tests: 0\n  detr-main/d2/detr/detr.py:\n    CONFIDENCE.HIGH: 4\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 3\n    SEVERITY.MEDIUM: 1\n    SEVERITY.UNDEFINED: 0\n    loc: 250\n    nosec: 0\n    skipped_tests: 0\n  detr-main/d2/train_net.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 126\n    nosec: 0\n    skipped_tests: 0\n  detr-main/datasets/__init__.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 16\n    nosec: 0\n    skipped_tests: 0\n  detr-main/datasets/coco.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 134\n    nosec: 0\n    skipped_tests: 0\n  detr-main/datasets/coco_eval.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 198\n    nosec: 0\n    skipped_tests: 0\n  detr-main/datasets/coco_panoptic.py:\n    CONFIDENCE.HIGH: 3\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 3\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 94\n    nosec: 0\n    skipped_tests: 0\n  detr-main/datasets/panoptic_eval.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 40\n    nosec: 0\n    skipped_tests: 0\n  detr-main/datasets/transforms.py:\n    CONFIDENCE.HIGH: 8\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 8\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 208\n    nosec: 0\n    skipped_tests: 0\n  detr-main/engine.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 153\n    nosec: 0\n    skipped_tests: 0\n  detr-main/hubconf.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 152\n    nosec: 0\n    skipped_tests: 0\n  detr-main/main.py:\n    CONFIDENCE.HIGH: 3\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 2\n    SEVERITY.UNDEFINED: 0\n    loc: 325\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/__init__.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 3\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/backbone.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 125\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/detr.py:\n    CONFIDENCE.HIGH: 7\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 7\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 332\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/matcher.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 82\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/position_encoding.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 1\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 88\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/segmentation.py:\n    CONFIDENCE.HIGH: 5\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 5\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 345\n    nosec: 0\n    skipped_tests: 0\n  detr-main/models/transformer.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 338\n    nosec: 0\n    skipped_tests: 0\n  detr-main/run_with_submitit.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 91\n    nosec: 0\n    skipped_tests: 0\n  detr-main/test_all.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 214\n    nosec: 0\n    skipped_tests: 0\n  detr-main/util/__init__.py:\n    CONFIDENCE.HIGH: 0\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 0\n    nosec: 0\n    skipped_tests: 0\n  detr-main/util/box_ops.py:\n    CONFIDENCE.HIGH: 2\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 2\n    SEVERITY.MEDIUM: 0\n    SEVERITY.UNDEFINED: 0\n    loc: 56\n    nosec: 0\n    skipped_tests: 0\n  detr-main/util/misc.py:\n    CONFIDENCE.HIGH: 9\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 8\n    SEVERITY.MEDIUM: 1\n    SEVERITY.UNDEFINED: 0\n    loc: 405\n    nosec: 0\n    skipped_tests: 0\n  detr-main/util/plot_utils.py:\n    CONFIDENCE.HIGH: 1\n    CONFIDENCE.LOW: 0\n    CONFIDENCE.MEDIUM: 0\n    CONFIDENCE.UNDEFINED: 0\n    SEVERITY.HIGH: 0\n    SEVERITY.LOW: 0\n    SEVERITY.MEDIUM: 1\n    SEVERITY.UNDEFINED: 0\n    loc: 102\n    nosec: 0\n    skipped_tests: 0\nresults: []\n",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\n"
+  },
+  {
+    "id": 15,
+    "flags": [
+      "file",
+      "-l",
+      "-l",
+      "xml"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-l",
+      "-i",
+      "-l",
+      "-f",
+      "xml"
+    ],
+    "returncode": 0,
+    "stdout": "<?xml version='1.0' encoding='utf-8'?>\n<testsuite name=\"bandit\" tests=\"0\" />",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\n"
+  },
+  {
+    "id": 16,
+    "flags": [
+      "file",
+      "-lll",
+      "-ll",
+      "yaml"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-ll",
+      "-f",
+      "yaml"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 17,
+    "flags": [
+      "file",
+      "-ll",
+      "-lll",
+      "yaml"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-lll",
+      "-f",
+      "yaml"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 18,
+    "flags": [
+      "file",
+      "-ll",
+      "-lll",
+      "screen"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-lll",
+      "-f",
+      "screen"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 19,
+    "flags": [
+      "file",
+      "-lll",
+      "-ll",
+      "json"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-ll",
+      "-f",
+      "json"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 20,
+    "flags": [
+      "file",
+      "-l",
+      "-l",
+      "txt"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-l",
+      "-i",
+      "-l",
+      "-f",
+      "txt"
+    ],
+    "returncode": 0,
+    "stdout": "Run started:2025-11-10 02:59:00.209445\n\nTest results:\n\tNo issues identified.\n\nCode scanned:\n\tTotal lines of code: 4070\n\tTotal lines skipped (#nosec): 0\n\tTotal potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0\n\nRun metrics:\n\tTotal issues (by severity):\n\t\tUndefined: 0\n\t\tLow: 43\n\t\tMedium: 6\n\t\tHigh: 0\n\tTotal issues (by confidence):\n\t\tUndefined: 0\n\t\tLow: 0\n\t\tMedium: 0\n\t\tHigh: 49\nFiles skipped (0):\n",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\n"
+  },
+  {
+    "id": 21,
+    "flags": [
+      "file",
+      "-l",
+      "-l",
+      "custom"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-l",
+      "-i",
+      "-l",
+      "-f",
+      "custom"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\n"
+  },
+  {
+    "id": 22,
+    "flags": [
+      "file",
+      "-lll",
+      "-l",
+      "html"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-l",
+      "-f",
+      "html"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 23,
+    "flags": [
+      "file",
+      "-lll",
+      "-ll",
+      "custom"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-ll",
+      "-f",
+      "custom"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 24,
+    "flags": [
+      "file",
+      "-lll",
+      "-lll",
+      "csv"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-lll",
+      "-i",
+      "-lll",
+      "-f",
+      "csv"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  },
+  {
+    "id": 25,
+    "flags": [
+      "file",
+      "-ll",
+      "-l",
+      "html"
+    ],
+    "command": [
+      "bandit",
+      "-r",
+      "detr-main",
+      "-a",
+      "file",
+      "-l",
+      "-ll",
+      "-i",
+      "-l",
+      "-f",
+      "html"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.12.9\nTraceback (most recent call last):\n  File \"/home/jmurrah/miniconda3/bin/bandit\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py\", line 676, in main\n    sev_level = constants.RANKING[args.severity - 1]\n                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nIndexError: list index out of range\n"
+  }
+]

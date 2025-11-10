@@ -1,0 +1,12 @@
+CASE 15
+Command : bandit -r detr-main -a file -l -l -i -l -f xml
+Return  : 0
+--- STDOUT ---
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="bandit" tests="0" />
+--- STDERR ---
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.9

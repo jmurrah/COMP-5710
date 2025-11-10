@@ -1,0 +1,11 @@
+CASE 0
+Command : bandit -r detr-main -a file -l -l -i -l -f csv
+Return  : 0
+--- STDOUT ---
+filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info
+--- STDERR ---
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.9
