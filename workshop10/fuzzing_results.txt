@@ -1,0 +1,10 @@
+Error 1: divide(a, 2) raised an exception: unsupported operand type(s) for /: 'str' and 'int'
+Error 2: divide(2, b) raised an exception: unsupported operand type(s) for /: 'int' and 'str'
+Error 3: divide(a, b) raised an exception: unsupported operand type(s) for /: 'str' and 'str'
+Error 4: divide(2, 0) raised an exception: division by zero
+Error 5: divide(None, 2) raised an exception: unsupported operand type(s) for /: 'NoneType' and 'int'
+Error 6: divide(2, None) raised an exception: unsupported operand type(s) for /: 'int' and 'NoneType'
+Error 7: divide(None, None) raised an exception: unsupported operand type(s) for /: 'NoneType' and 'NoneType'
+Error 8: divide([2], 2) raised an exception: unsupported operand type(s) for /: 'list' and 'int'
+Error 9: divide(2, {'a': 2}) raised an exception: unsupported operand type(s) for /: 'int' and 'dict'
+Error 10: divide({1, 2}, {3, 4}) raised an exception: unsupported operand type(s) for /: 'set' and 'set'
