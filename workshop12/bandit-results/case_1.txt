@@ -1,19 +1,17 @@
 CASE 1
-Command : bandit -r detr-main -a vuln -l -ll -i -ll -f csv
+Command : bandit -r detr-main -a vuln -ll -ii -f csv
 Return  : 1
 --- STDOUT ---
-
+filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info
+detr-main/d2/converter.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,48,21,70,[48],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+detr-main/d2/detr/detr.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,127,25,17,"[127, 128, 129]",https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+detr-main/main.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,258,21,72,[258],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+detr-main/main.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,268,25,68,[268],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+detr-main/util/misc.py,blacklist,B301,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,"Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",131,25,45,[131],https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+detr-main/util/plot_utils.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,103,15,28,[103],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.9
-Traceback (most recent call last):
-  File "/home/jmurrah/miniconda3/bin/bandit", line 8, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py", line 676, in main
-    sev_level = constants.RANKING[args.severity - 1]
-                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-IndexError: list index out of range

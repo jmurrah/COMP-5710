@@ -1,19 +1,246 @@
 CASE 25
-Command : bandit -r detr-main -a file -l -ll -i -l -f html
+Command : bandit -r detr-main -a file -ll -i -f html
 Return  : 1
 --- STDOUT ---
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta charset="UTF-8">
+
+<title>
+    Bandit Report
+</title>
+
+<style>
+
+html * {
+    font-family: "Arial", sans-serif;
+}
+
+pre {
+    font-family: "Monaco", monospace;
+}
+
+.bordered-box {
+    border: 1px solid black;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+}
+
+.metrics-box {
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+.metrics-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.issue-description {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.candidate-issues {
+    margin-left: 2em;
+    border-left: solid 1px; LightGray;
+    padding-left: 5%;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.issue-block {
+    border: 1px solid LightGray;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.issue-sev-high {
+    background-color: Pink;
+}
+
+.issue-sev-medium {
+    background-color: NavajoWhite;
+}
+
+.issue-sev-low {
+    background-color: LightCyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="metrics">
+    <div class="metrics-box bordered-box">
+        <div class="metrics-title">
+            Metrics:<br>
+        </div>
+        Total lines of code: <span id="loc">4070</span><br>
+        Total lines skipped (#nosec): <span id="nosec">0</span>
+    </div>
+</div>
+
+
+
+
+<br>
+<div id="results">
+    
+<div id="issue-0">
+<div class="issue-block issue-sev-medium">
+    <b>pytorch_load: </b> Use of unsafe PyTorch load<br>
+    <b>Test ID:</b> B614<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
+    <b>File: </b><a href="detr-main/d2/converter.py" target="_blank">detr-main/d2/converter.py</a><br>
+    <b>Line number: </b>48<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
+
+<div class="code">
+<pre>
+47	    else:
+48	        checkpoint = torch.load(args.source_model, map_location=&quot;cpu&quot;)
+49	    model_to_convert = checkpoint[&quot;model&quot;]
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-1">
+<div class="issue-block issue-sev-medium">
+    <b>pytorch_load: </b> Use of unsafe PyTorch load<br>
+    <b>Test ID:</b> B614<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
+    <b>File: </b><a href="detr-main/d2/detr/detr.py" target="_blank">detr-main/d2/detr/detr.py</a><br>
+    <b>Line number: </b>127<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
+
+<div class="code">
+<pre>
+126	                print(&quot;LOAD pre-trained weights&quot;)
+127	                weight = torch.load(
+128	                    frozen_weights, map_location=lambda storage, loc: storage
+129	                )[&quot;model&quot;]
+130	                new_weight = {}
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-2">
+<div class="issue-block issue-sev-medium">
+    <b>pytorch_load: </b> Use of unsafe PyTorch load<br>
+    <b>Test ID:</b> B614<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
+    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
+    <b>Line number: </b>258<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
+
+<div class="code">
+<pre>
+257	    if args.frozen_weights is not None:
+258	        checkpoint = torch.load(args.frozen_weights, map_location=&quot;cpu&quot;)
+259	        model_without_ddp.detr.load_state_dict(checkpoint[&quot;model&quot;])
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-3">
+<div class="issue-block issue-sev-medium">
+    <b>pytorch_load: </b> Use of unsafe PyTorch load<br>
+    <b>Test ID:</b> B614<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
+    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
+    <b>Line number: </b>268<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
+
+<div class="code">
+<pre>
+267	        else:
+268	            checkpoint = torch.load(args.resume, map_location=&quot;cpu&quot;)
+269	        model_without_ddp.load_state_dict(checkpoint[&quot;model&quot;])
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-4">
+<div class="issue-block issue-sev-medium">
+    <b>blacklist: </b> Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.<br>
+    <b>Test ID:</b> B301<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
+    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
+    <b>Line number: </b>131<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle</a><br>
+
+<div class="code">
+<pre>
+130	        buffer = tensor.cpu().numpy().tobytes()[:size]
+131	        data_list.append(pickle.loads(buffer))
+132	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-5">
+<div class="issue-block issue-sev-medium">
+    <b>pytorch_load: </b> Use of unsafe PyTorch load<br>
+    <b>Test ID:</b> B614<br>
+    <b>Severity: </b>MEDIUM<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
+    <b>File: </b><a href="detr-main/util/plot_utils.py" target="_blank">detr-main/util/plot_utils.py</a><br>
+    <b>Line number: </b>103<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
+
+<div class="code">
+<pre>
+102	    ):
+103	        data = torch.load(f)
+104	        # precision is n_iou, n_points, n_cat, n_area, max_det
+</pre>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.9
-Traceback (most recent call last):
-  File "/home/jmurrah/miniconda3/bin/bandit", line 8, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py", line 676, in main
-    sev_level = constants.RANKING[args.severity - 1]
-                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-IndexError: list index out of range

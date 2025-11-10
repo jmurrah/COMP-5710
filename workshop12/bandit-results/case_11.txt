@@ -1,19 +1,93 @@
 CASE 11
-Command : bandit -r detr-main -a file -l -ll -i -lll -f txt
+Command : bandit -r detr-main -a file -ll -iii -f txt
 Return  : 1
 --- STDOUT ---
+Run started:2025-11-10 03:02:03.224282
 
+Test results:
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/d2/converter.py:48:21
+47	    else:
+48	        checkpoint = torch.load(args.source_model, map_location="cpu")
+49	    model_to_convert = checkpoint["model"]
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/d2/detr/detr.py:127:25
+126	                print("LOAD pre-trained weights")
+127	                weight = torch.load(
+128	                    frozen_weights, map_location=lambda storage, loc: storage
+129	                )["model"]
+130	                new_weight = {}
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/main.py:258:21
+257	    if args.frozen_weights is not None:
+258	        checkpoint = torch.load(args.frozen_weights, map_location="cpu")
+259	        model_without_ddp.detr.load_state_dict(checkpoint["model"])
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/main.py:268:25
+267	        else:
+268	            checkpoint = torch.load(args.resume, map_location="cpu")
+269	        model_without_ddp.load_state_dict(checkpoint["model"])
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+   Location: detr-main/util/misc.py:131:25
+130	        buffer = tensor.cpu().numpy().tobytes()[:size]
+131	        data_list.append(pickle.loads(buffer))
+132	
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/util/plot_utils.py:103:15
+102	    ):
+103	        data = torch.load(f)
+104	        # precision is n_iou, n_points, n_cat, n_area, max_det
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 4070
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 43
+		Medium: 6
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 49
+Files skipped (0):
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.9
-Traceback (most recent call last):
-  File "/home/jmurrah/miniconda3/bin/bandit", line 8, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py", line 676, in main
-    sev_level = constants.RANKING[args.severity - 1]
-                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-IndexError: list index out of range

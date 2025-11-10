@@ -9,7 +9,7 @@ BANDIT_FLAGS = OrderedDict(
     {
         "a": ["file", "vuln"],
         "l": ["-l", "-ll", "-lll"],
-        "i": ["-l", "-ll", "-lll"],
+        "i": ["-i", "-ii", "-iii"],
         "f": ["csv", "custom", "html", "json", "screen", "txt", "xml", "yaml"],
     }
 )
@@ -23,9 +23,7 @@ def run_bandit_case(id, pair) -> dict[str, str]:
         "detr-main",
         "-a",
         pair.a,
-        "-l",
         pair.l,
-        "-i",
         pair.i,
         "-f",
         pair.f,

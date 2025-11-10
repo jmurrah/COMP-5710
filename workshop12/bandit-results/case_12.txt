@@ -1,19 +1,30 @@
 CASE 12
-Command : bandit -r detr-main -a file -l -ll -i -lll -f xml
+Command : bandit -r detr-main -a file -ll -iii -f xml
 Return  : 1
 --- STDOUT ---
-
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="bandit" tests="6"><testcase classname="detr-main/d2/converter.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+Use of unsafe PyTorch load
+Location detr-main/d2/converter.py:48</error></testcase><testcase classname="detr-main/d2/detr/detr.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+Use of unsafe PyTorch load
+Location detr-main/d2/detr/detr.py:127</error></testcase><testcase classname="detr-main/main.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+Use of unsafe PyTorch load
+Location detr-main/main.py:258</error></testcase><testcase classname="detr-main/main.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+Use of unsafe PyTorch load
+Location detr-main/main.py:268</error></testcase><testcase classname="detr-main/util/misc.py" name="blacklist"><error more_info="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle" type="MEDIUM" message="Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.">Test ID: B301 Severity: MEDIUM Confidence: HIGH
+CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+Location detr-main/util/misc.py:131</error></testcase><testcase classname="detr-main/util/plot_utils.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+Use of unsafe PyTorch load
+Location detr-main/util/plot_utils.py:103</error></testcase></testsuite>
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.9
-Traceback (most recent call last):
-  File "/home/jmurrah/miniconda3/bin/bandit", line 8, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/home/jmurrah/miniconda3/lib/python3.12/site-packages/bandit/cli/main.py", line 676, in main
-    sev_level = constants.RANKING[args.severity - 1]
-                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-IndexError: list index out of range

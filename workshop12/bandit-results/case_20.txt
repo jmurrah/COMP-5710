@@ -1,11 +1,511 @@
 CASE 20
-Command : bandit -r detr-main -a file -l -l -i -l -f txt
-Return  : 0
+Command : bandit -r detr-main -a file -l -i -f txt
+Return  : 1
 --- STDOUT ---
-Run started:2025-11-10 02:59:00.209445
+Run started:2025-11-10 03:02:06.623648
 
 Test results:
-	No issues identified.
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/d2/converter.py:48:21
+47	    else:
+48	        checkpoint = torch.load(args.source_model, map_location="cpu")
+49	    model_to_convert = checkpoint["model"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/d2/detr/dataset_mapper.py:30:8
+29	    if sample_style == "range":
+30	        assert (
+31	            len(min_size) == 2
+32	        ), "more than 2 ({}) min_size(s) are provided for ranges".format(len(min_size))
+33	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/d2/detr/detr.py:48:8
+47	        )
+48	        assert len(features) == len(masks)
+49	        for i, k in enumerate(features.keys()):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/d2/detr/detr.py:55:8
+54	        masks = []
+55	        assert len(feature_shapes) == len(self.feature_strides)
+56	        for idx, shape in enumerate(feature_shapes):
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/d2/detr/detr.py:127:25
+126	                print("LOAD pre-trained weights")
+127	                weight = torch.load(
+128	                    frozen_weights, map_location=lambda storage, loc: storage
+129	                )["model"]
+130	                new_weight = {}
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/d2/detr/detr.py:248:8
+247	        """
+248	        assert len(box_cls) == len(image_sizes)
+249	        results = []
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/datasets/coco.py:156:4
+155	    root = Path(args.coco_path)
+156	    assert root.exists(), f"provided COCO path {root} does not exist"
+157	    mode = "instances"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/datasets/coco_eval.py:24:8
+23	    def __init__(self, coco_gt, iou_types):
+24	        assert isinstance(iou_types, (list, tuple))
+25	        coco_gt = copy.deepcopy(coco_gt)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/datasets/coco_panoptic.py:28:16
+27	            for img, ann in zip(self.coco["images"], self.coco["annotations"]):
+28	                assert img["file_name"][:-4] == ann["file_name"][:-4]
+29	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/datasets/coco_panoptic.py:96:4
+95	    ann_folder_root = Path(args.coco_panoptic_path)
+96	    assert (
+97	        img_folder_root.exists()
+98	    ), f"provided COCO path {img_folder_root} does not exist"
+99	    assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/datasets/coco_panoptic.py:99:4
+98	    ), f"provided COCO path {img_folder_root} does not exist"
+99	    assert (
+100	        ann_folder_root.exists()
+101	    ), f"provided COCO path {ann_folder_root} does not exist"
+102	    mode = "panoptic"
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:173:12
+172	    def __call__(self, img: PIL.Image.Image, target: dict):
+173	        w = random.randint(self.min_size, min(img.width, self.max_size))
+174	        h = random.randint(self.min_size, min(img.height, self.max_size))
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:174:12
+173	        w = random.randint(self.min_size, min(img.width, self.max_size))
+174	        h = random.randint(self.min_size, min(img.height, self.max_size))
+175	        region = T.RandomCrop.get_params(img, [h, w])
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:196:11
+195	    def __call__(self, img, target):
+196	        if random.random() < self.p:
+197	            return hflip(img, target)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/datasets/transforms.py:203:8
+202	    def __init__(self, sizes, max_size=None):
+203	        assert isinstance(sizes, (list, tuple))
+204	        self.sizes = sizes
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:208:15
+207	    def __call__(self, img, target=None):
+208	        size = random.choice(self.sizes)
+209	        return resize(img, target, size, self.max_size)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:217:16
+216	    def __call__(self, img, target):
+217	        pad_x = random.randint(0, self.max_pad)
+218	        pad_y = random.randint(0, self.max_pad)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:218:16
+217	        pad_x = random.randint(0, self.max_pad)
+218	        pad_y = random.randint(0, self.max_pad)
+219	        return pad(img, target, (pad_x, pad_y))
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: detr-main/datasets/transforms.py:234:11
+233	    def __call__(self, img, target):
+234	        if random.random() < self.p:
+235	            return self.transforms1(img, target)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/main.py:178:8
+177	    if args.frozen_weights is not None:
+178	        assert args.masks, "Frozen training is meant for segmentation only"
+179	    print(args)
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/main.py:258:21
+257	    if args.frozen_weights is not None:
+258	        checkpoint = torch.load(args.frozen_weights, map_location="cpu")
+259	        model_without_ddp.detr.load_state_dict(checkpoint["model"])
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/main.py:268:25
+267	        else:
+268	            checkpoint = torch.load(args.resume, map_location="cpu")
+269	        model_without_ddp.load_state_dict(checkpoint["model"])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/backbone.py:101:12
+100	            m = tensor_list.mask
+101	            assert m is not None
+102	            mask = F.interpolate(m[None].float(), size=x.shape[-2:]).to(torch.bool)[0]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:75:8
+74	        src, mask = features[-1].decompose()
+75	        assert mask is not None
+76	        hs = self.transformer(
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:128:8
+127	        """
+128	        assert "pred_logits" in outputs
+129	        src_logits = outputs["pred_logits"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:174:8
+173	        """
+174	        assert "pred_boxes" in outputs
+175	        idx = self._get_src_permutation_idx(indices)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:199:8
+198	        """
+199	        assert "pred_masks" in outputs
+200	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:251:8
+250	        }
+251	        assert loss in loss_map, f"do you really want to compute {loss} loss?"
+252	        return loss_map[loss](outputs, targets, indices, num_boxes, **kwargs)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:315:8
+314	
+315	        assert len(out_logits) == len(target_sizes)
+316	        assert target_sizes.shape[1] == 2
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/detr.py:316:8
+315	        assert len(out_logits) == len(target_sizes)
+316	        assert target_sizes.shape[1] == 2
+317	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/matcher.py:34:8
+33	        self.cost_giou = cost_giou
+34	        assert (
+35	            cost_class != 0 or cost_bbox != 0 or cost_giou != 0
+36	        ), "all costs cant be 0"
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/position_encoding.py:34:8
+33	        mask = tensor_list.mask
+34	        assert mask is not None
+35	        not_mask = ~mask
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/segmentation.py:49:8
+48	        src, mask = features[-1].decompose()
+49	        assert mask is not None
+50	        src_proj = self.detr.input_proj(src)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/segmentation.py:256:8
+255	    def forward(self, results, outputs, orig_target_sizes, max_target_sizes):
+256	        assert len(orig_target_sizes) == len(max_target_sizes)
+257	        max_h, max_w = max_target_sizes.max(0)[0].tolist()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/segmentation.py:302:8
+301	            target_sizes = processed_sizes
+302	        assert len(processed_sizes) == len(target_sizes)
+303	        out_logits, raw_masks, raw_boxes = (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/segmentation.py:308:8
+307	        )
+308	        assert len(out_logits) == len(raw_masks) == len(target_sizes)
+309	        preds = []
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/models/segmentation.py:334:12
+333	            h, w = cur_masks.shape[-2:]
+334	            assert len(cur_boxes) == len(cur_classes)
+335	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/util/box_ops.py:49:4
+48	    # so do an early check
+49	    assert (boxes1[:, 2:] >= boxes1[:, :2]).all()
+50	    assert (boxes2[:, 2:] >= boxes2[:, :2]).all()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/util/box_ops.py:50:4
+49	    assert (boxes1[:, 2:] >= boxes1[:, :2]).all()
+50	    assert (boxes2[:, 2:] >= boxes2[:, :2]).all()
+51	    iou, union = box_iou(boxes1, boxes2)
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: detr-main/util/misc.py:8:0
+7	import os
+8	import subprocess
+9	import time
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: detr-main/util/misc.py:12:0
+11	import datetime
+12	import pickle
+13	from packaging import version
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+   Location: detr-main/util/misc.py:131:25
+130	        buffer = tensor.cpu().numpy().tobytes()[:size]
+131	        data_list.append(pickle.loads(buffer))
+132	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/util/misc.py:172:12
+171	                v = v.item()
+172	            assert isinstance(v, (float, int))
+173	            self.meters[k].update(v)
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: detr-main/util/misc.py:275:15
+274	    def _run(command):
+275	        return subprocess.check_output(command, cwd=cwd).decode("ascii").strip()
+276	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b607_start_process_with_partial_path.html
+   Location: detr-main/util/misc.py:282:8
+281	        sha = _run(["git", "rev-parse", "HEAD"])
+282	        subprocess.check_output(["git", "diff"], cwd=cwd)
+283	        diff = _run(["git", "diff-index", "HEAD"])
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: detr-main/util/misc.py:282:8
+281	        sha = _run(["git", "rev-parse", "HEAD"])
+282	        subprocess.check_output(["git", "diff"], cwd=cwd)
+283	        diff = _run(["git", "diff-index", "HEAD"])
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html
+   Location: detr-main/util/misc.py:286:4
+285	        branch = _run(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+286	    except Exception:
+287	        pass
+288	    message = f"sha: {sha}, status: {diff}, branch: {branch}"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: detr-main/util/misc.py:317:12
+316	        if mask is not None:
+317	            assert mask is not None
+318	            cast_mask = mask.to(device)
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+   Location: detr-main/util/plot_utils.py:103:15
+102	    ):
+103	        data = torch.load(f)
+104	        # precision is n_iou, n_points, n_cat, n_area, max_det
+
+--------------------------------------------------
 
 Code scanned:
 	Total lines of code: 4070
