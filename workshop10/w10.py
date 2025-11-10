@@ -23,7 +23,7 @@ def simpleFuzzer():
         (set([1, 2]), set([3, 4])),  # Both set (error #10)
     ]
 
-    output_filename = "fuzzing_results.txt"
+    output_filename = "crash_messages.txt"
     with open(output_filename, "w") as f:
         for i, error in enumerate(errors):
             try:
