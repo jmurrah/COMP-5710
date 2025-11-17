@@ -1,5 +1,5 @@
 CASE 24
-Command : bandit -r detr-main -a file -lll -iii -f csv
+Command : bandit -r w12 -a file -lll -iii -f csv
 Return  : 0
 --- STDOUT ---
 filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info

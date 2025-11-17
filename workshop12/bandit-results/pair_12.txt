@@ -1,27 +1,27 @@
 CASE 12
-Command : bandit -r detr-main -a file -ll -iii -f xml
+Command : bandit -r w12 -a file -ll -iii -f xml
 Return  : 1
 --- STDOUT ---
 <?xml version='1.0' encoding='utf-8'?>
-<testsuite name="bandit" tests="6"><testcase classname="detr-main/d2/converter.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+<testsuite name="bandit" tests="6"><testcase classname="w12/detr-main/d2/converter.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
 CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
 Use of unsafe PyTorch load
-Location detr-main/d2/converter.py:48</error></testcase><testcase classname="detr-main/d2/detr/detr.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+Location w12/detr-main/d2/converter.py:36</error></testcase><testcase classname="w12/detr-main/d2/detr/detr.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
 CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
 Use of unsafe PyTorch load
-Location detr-main/d2/detr/detr.py:127</error></testcase><testcase classname="detr-main/main.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+Location w12/detr-main/d2/detr/detr.py:121</error></testcase><testcase classname="w12/detr-main/main.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
 CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
 Use of unsafe PyTorch load
-Location detr-main/main.py:258</error></testcase><testcase classname="detr-main/main.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+Location w12/detr-main/main.py:168</error></testcase><testcase classname="w12/detr-main/main.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
 CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
 Use of unsafe PyTorch load
-Location detr-main/main.py:268</error></testcase><testcase classname="detr-main/util/misc.py" name="blacklist"><error more_info="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle" type="MEDIUM" message="Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.">Test ID: B301 Severity: MEDIUM Confidence: HIGH
+Location w12/detr-main/main.py:177</error></testcase><testcase classname="w12/detr-main/util/misc.py" name="blacklist"><error more_info="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle" type="MEDIUM" message="Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.">Test ID: B301 Severity: MEDIUM Confidence: HIGH
 CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
 Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
-Location detr-main/util/misc.py:131</error></testcase><testcase classname="detr-main/util/plot_utils.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
+Location w12/detr-main/util/misc.py:127</error></testcase><testcase classname="w12/detr-main/util/plot_utils.py" name="pytorch_load"><error more_info="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" type="MEDIUM" message="Use of unsafe PyTorch load">Test ID: B614 Severity: MEDIUM Confidence: HIGH
 CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
 Use of unsafe PyTorch load
-Location detr-main/util/plot_utils.py:103</error></testcase></testsuite>
+Location w12/detr-main/util/plot_utils.py:86</error></testcase></testsuite>
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None

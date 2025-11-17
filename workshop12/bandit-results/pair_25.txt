@@ -1,5 +1,5 @@
 CASE 25
-Command : bandit -r detr-main -a file -ll -i -f html
+Command : bandit -r w12 -a file -ll -i -f html
 Return  : 1
 --- STDOUT ---
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ pre {
         <div class="metrics-title">
             Metrics:<br>
         </div>
-        Total lines of code: <span id="loc">4070</span><br>
+        Total lines of code: <span id="loc">3395</span><br>
         Total lines skipped (#nosec): <span id="nosec">0</span>
     </div>
 </div>
@@ -101,15 +101,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/d2/converter.py" target="_blank">detr-main/d2/converter.py</a><br>
-    <b>Line number: </b>48<br>
+    <b>File: </b><a href="w12/detr-main/d2/converter.py" target="_blank">w12/detr-main/d2/converter.py</a><br>
+    <b>Line number: </b>36<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-47	    else:
-48	        checkpoint = torch.load(args.source_model, map_location=&quot;cpu&quot;)
-49	    model_to_convert = checkpoint[&quot;model&quot;]
+35	    else:
+36	        checkpoint = torch.load(args.source_model, map_location=&quot;cpu&quot;)
+37	    model_to_convert = checkpoint[&quot;model&quot;]
 </pre>
 </div>
 
@@ -124,17 +124,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/d2/detr/detr.py" target="_blank">detr-main/d2/detr/detr.py</a><br>
-    <b>Line number: </b>127<br>
+    <b>File: </b><a href="w12/detr-main/d2/detr/detr.py" target="_blank">w12/detr-main/d2/detr/detr.py</a><br>
+    <b>Line number: </b>121<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-126	                print(&quot;LOAD pre-trained weights&quot;)
-127	                weight = torch.load(
-128	                    frozen_weights, map_location=lambda storage, loc: storage
-129	                )[&quot;model&quot;]
-130	                new_weight = {}
+120	                print(&quot;LOAD pre-trained weights&quot;)
+121	                weight = torch.load(frozen_weights, map_location=lambda storage, loc: storage)[&#x27;model&#x27;]
+122	                new_weight = {}
 </pre>
 </div>
 
@@ -149,15 +147,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
-    <b>Line number: </b>258<br>
+    <b>File: </b><a href="w12/detr-main/main.py" target="_blank">w12/detr-main/main.py</a><br>
+    <b>Line number: </b>168<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-257	    if args.frozen_weights is not None:
-258	        checkpoint = torch.load(args.frozen_weights, map_location=&quot;cpu&quot;)
-259	        model_without_ddp.detr.load_state_dict(checkpoint[&quot;model&quot;])
+167	    if args.frozen_weights is not None:
+168	        checkpoint = torch.load(args.frozen_weights, map_location=&#x27;cpu&#x27;)
+169	        model_without_ddp.detr.load_state_dict(checkpoint[&#x27;model&#x27;])
 </pre>
 </div>
 
@@ -172,15 +170,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
-    <b>Line number: </b>268<br>
+    <b>File: </b><a href="w12/detr-main/main.py" target="_blank">w12/detr-main/main.py</a><br>
+    <b>Line number: </b>177<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-267	        else:
-268	            checkpoint = torch.load(args.resume, map_location=&quot;cpu&quot;)
-269	        model_without_ddp.load_state_dict(checkpoint[&quot;model&quot;])
+176	        else:
+177	            checkpoint = torch.load(args.resume, map_location=&#x27;cpu&#x27;)
+178	        model_without_ddp.load_state_dict(checkpoint[&#x27;model&#x27;])
 </pre>
 </div>
 
@@ -195,15 +193,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>131<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>127<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle</a><br>
 
 <div class="code">
 <pre>
-130	        buffer = tensor.cpu().numpy().tobytes()[:size]
-131	        data_list.append(pickle.loads(buffer))
-132	
+126	        buffer = tensor.cpu().numpy().tobytes()[:size]
+127	        data_list.append(pickle.loads(buffer))
+128	
 </pre>
 </div>
 
@@ -218,15 +216,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/util/plot_utils.py" target="_blank">detr-main/util/plot_utils.py</a><br>
-    <b>Line number: </b>103<br>
+    <b>File: </b><a href="w12/detr-main/util/plot_utils.py" target="_blank">w12/detr-main/util/plot_utils.py</a><br>
+    <b>Line number: </b>86<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-102	    ):
-103	        data = torch.load(f)
-104	        # precision is n_iou, n_points, n_cat, n_area, max_det
+85	    for f, color, name in zip(files, sns.color_palette(&quot;Blues&quot;, n_colors=len(files)), names):
+86	        data = torch.load(f)
+87	        # precision is n_iou, n_points, n_cat, n_area, max_det
 </pre>
 </div>
 

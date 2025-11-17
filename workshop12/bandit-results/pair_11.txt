@@ -1,75 +1,73 @@
 CASE 11
-Command : bandit -r detr-main -a file -ll -iii -f txt
+Command : bandit -r w12 -a file -ll -iii -f txt
 Return  : 1
 --- STDOUT ---
-Run started:2025-11-10 03:05:03.088038
+Run started:2025-11-17 03:15:49.766739
 
 Test results:
 >> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
    Severity: Medium   Confidence: High
    CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
    More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-   Location: detr-main/d2/converter.py:48:21
-47	    else:
-48	        checkpoint = torch.load(args.source_model, map_location="cpu")
-49	    model_to_convert = checkpoint["model"]
+   Location: w12/detr-main/d2/converter.py:36:21
+35	    else:
+36	        checkpoint = torch.load(args.source_model, map_location="cpu")
+37	    model_to_convert = checkpoint["model"]
 
 --------------------------------------------------
 >> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
    Severity: Medium   Confidence: High
    CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
    More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-   Location: detr-main/d2/detr/detr.py:127:25
-126	                print("LOAD pre-trained weights")
-127	                weight = torch.load(
-128	                    frozen_weights, map_location=lambda storage, loc: storage
-129	                )["model"]
-130	                new_weight = {}
+   Location: w12/detr-main/d2/detr/detr.py:121:25
+120	                print("LOAD pre-trained weights")
+121	                weight = torch.load(frozen_weights, map_location=lambda storage, loc: storage)['model']
+122	                new_weight = {}
 
 --------------------------------------------------
 >> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
    Severity: Medium   Confidence: High
    CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
    More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-   Location: detr-main/main.py:258:21
-257	    if args.frozen_weights is not None:
-258	        checkpoint = torch.load(args.frozen_weights, map_location="cpu")
-259	        model_without_ddp.detr.load_state_dict(checkpoint["model"])
+   Location: w12/detr-main/main.py:168:21
+167	    if args.frozen_weights is not None:
+168	        checkpoint = torch.load(args.frozen_weights, map_location='cpu')
+169	        model_without_ddp.detr.load_state_dict(checkpoint['model'])
 
 --------------------------------------------------
 >> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
    Severity: Medium   Confidence: High
    CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
    More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-   Location: detr-main/main.py:268:25
-267	        else:
-268	            checkpoint = torch.load(args.resume, map_location="cpu")
-269	        model_without_ddp.load_state_dict(checkpoint["model"])
+   Location: w12/detr-main/main.py:177:25
+176	        else:
+177	            checkpoint = torch.load(args.resume, map_location='cpu')
+178	        model_without_ddp.load_state_dict(checkpoint['model'])
 
 --------------------------------------------------
 >> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
    Severity: Medium   Confidence: High
    CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
    More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
-   Location: detr-main/util/misc.py:131:25
-130	        buffer = tensor.cpu().numpy().tobytes()[:size]
-131	        data_list.append(pickle.loads(buffer))
-132	
+   Location: w12/detr-main/util/misc.py:127:25
+126	        buffer = tensor.cpu().numpy().tobytes()[:size]
+127	        data_list.append(pickle.loads(buffer))
+128	
 
 --------------------------------------------------
 >> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
    Severity: Medium   Confidence: High
    CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
    More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-   Location: detr-main/util/plot_utils.py:103:15
-102	    ):
-103	        data = torch.load(f)
-104	        # precision is n_iou, n_points, n_cat, n_area, max_det
+   Location: w12/detr-main/util/plot_utils.py:86:15
+85	    for f, color, name in zip(files, sns.color_palette("Blues", n_colors=len(files)), names):
+86	        data = torch.load(f)
+87	        # precision is n_iou, n_points, n_cat, n_area, max_det
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 4070
+	Total lines of code: 3395
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 

@@ -20,7 +20,7 @@ def run_bandit_case(id, pair) -> dict[str, str]:
     command = [
         "bandit",
         "-r",
-        "detr-main",
+        "w12",
         "-a",
         pair.a,
         pair.l,

@@ -1,10 +1,10 @@
 CASE 19
-Command : bandit -r detr-main -a file -lll -ii -f json
+Command : bandit -r w12 -a file -lll -ii -f json
 Return  : 0
 --- STDOUT ---
 {
   "errors": [],
-  "generated_at": "2025-11-10T03:05:05Z",
+  "generated_at": "2025-11-17T03:15:53Z",
   "metrics": {
     "_totals": {
       "CONFIDENCE.HIGH": 49,
@@ -15,11 +15,11 @@ Return  : 0
       "SEVERITY.LOW": 43,
       "SEVERITY.MEDIUM": 6,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 4070,
+      "loc": 3395,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/converter.py": {
+    "w12/detr-main/d2/converter.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -28,11 +28,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 68,
+      "loc": 52,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/__init__.py": {
+    "w12/detr-main/d2/detr/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -45,7 +45,7 @@ Return  : 0
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/config.py": {
+    "w12/detr-main/d2/detr/config.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -58,7 +58,7 @@ Return  : 0
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/dataset_mapper.py": {
+    "w12/detr-main/d2/detr/dataset_mapper.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -67,11 +67,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 100,
+      "loc": 94,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/detr.py": {
+    "w12/detr-main/d2/detr/detr.py": {
       "CONFIDENCE.HIGH": 4,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -80,11 +80,11 @@ Return  : 0
       "SEVERITY.LOW": 3,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 250,
+      "loc": 222,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/train_net.py": {
+    "w12/detr-main/d2/train_net.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -93,11 +93,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 126,
+      "loc": 117,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/__init__.py": {
+    "w12/detr-main/datasets/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -110,7 +110,7 @@ Return  : 0
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco.py": {
+    "w12/detr-main/datasets/coco.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -119,11 +119,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 134,
+      "loc": 122,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco_eval.py": {
+    "w12/detr-main/datasets/coco_eval.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -132,11 +132,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 198,
+      "loc": 191,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco_panoptic.py": {
+    "w12/detr-main/datasets/coco_panoptic.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -145,11 +145,11 @@ Return  : 0
       "SEVERITY.LOW": 3,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 94,
+      "loc": 72,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/panoptic_eval.py": {
+    "w12/detr-main/datasets/panoptic_eval.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -158,11 +158,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 40,
+      "loc": 35,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/transforms.py": {
+    "w12/detr-main/datasets/transforms.py": {
       "CONFIDENCE.HIGH": 8,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -171,11 +171,11 @@ Return  : 0
       "SEVERITY.LOW": 8,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 208,
+      "loc": 198,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/engine.py": {
+    "w12/detr-main/engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -184,11 +184,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 153,
+      "loc": 120,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/hubconf.py": {
+    "w12/detr-main/hubconf.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -197,11 +197,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 152,
+      "loc": 140,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/main.py": {
+    "w12/detr-main/main.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -210,11 +210,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 2,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 325,
+      "loc": 199,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/__init__.py": {
+    "w12/detr-main/models/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -227,7 +227,7 @@ Return  : 0
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/backbone.py": {
+    "w12/detr-main/models/backbone.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -236,11 +236,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 125,
+      "loc": 93,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/detr.py": {
+    "w12/detr-main/models/detr.py": {
       "CONFIDENCE.HIGH": 7,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -249,11 +249,11 @@ Return  : 0
       "SEVERITY.LOW": 7,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 332,
+      "loc": 279,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/matcher.py": {
+    "w12/detr-main/models/matcher.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -262,11 +262,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 82,
+      "loc": 58,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/position_encoding.py": {
+    "w12/detr-main/models/position_encoding.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -275,11 +275,11 @@ Return  : 0
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 88,
+      "loc": 74,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/segmentation.py": {
+    "w12/detr-main/models/segmentation.py": {
       "CONFIDENCE.HIGH": 5,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -288,11 +288,11 @@ Return  : 0
       "SEVERITY.LOW": 5,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 345,
+      "loc": 286,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/transformer.py": {
+    "w12/detr-main/models/transformer.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -301,11 +301,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 338,
+      "loc": 241,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/run_with_submitit.py": {
+    "w12/detr-main/run_with_submitit.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -314,11 +314,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 91,
+      "loc": 81,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/test_all.py": {
+    "w12/detr-main/test_all.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -327,11 +327,11 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 214,
+      "loc": 166,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/__init__.py": {
+    "w12/detr-main/util/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -344,7 +344,7 @@ Return  : 0
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/box_ops.py": {
+    "w12/detr-main/util/box_ops.py": {
       "CONFIDENCE.HIGH": 2,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -353,11 +353,11 @@ Return  : 0
       "SEVERITY.LOW": 2,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 56,
+      "loc": 58,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/misc.py": {
+    "w12/detr-main/util/misc.py": {
       "CONFIDENCE.HIGH": 9,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -366,11 +366,11 @@ Return  : 0
       "SEVERITY.LOW": 8,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 405,
+      "loc": 369,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/plot_utils.py": {
+    "w12/detr-main/util/plot_utils.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -379,7 +379,7 @@ Return  : 0
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 102,
+      "loc": 84,
       "nosec": 0,
       "skipped_tests": 0
     }

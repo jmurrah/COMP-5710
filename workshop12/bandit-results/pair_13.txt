@@ -1,5 +1,5 @@
 CASE 13
-Command : bandit -r detr-main -a vuln -lll -ii -f xml
+Command : bandit -r w12 -a vuln -lll -ii -f xml
 Return  : 0
 --- STDOUT ---
 <?xml version='1.0' encoding='utf-8'?>

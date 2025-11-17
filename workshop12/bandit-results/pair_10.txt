@@ -1,14 +1,14 @@
 CASE 10
-Command : bandit -r detr-main -a vuln -lll -ii -f txt
+Command : bandit -r w12 -a vuln -lll -ii -f txt
 Return  : 0
 --- STDOUT ---
-Run started:2025-11-10 03:05:02.727011
+Run started:2025-11-17 03:15:49.378100
 
 Test results:
 	No issues identified.
 
 Code scanned:
-	Total lines of code: 4070
+	Total lines of code: 3395
 	Total lines skipped (#nosec): 0
 	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
 

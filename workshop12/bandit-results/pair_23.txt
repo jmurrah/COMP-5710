@@ -1,5 +1,5 @@
 CASE 23
-Command : bandit -r detr-main -a file -lll -ii -f custom
+Command : bandit -r w12 -a file -lll -ii -f custom
 Return  : 0
 --- STDOUT ---
 

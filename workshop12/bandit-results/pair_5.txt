@@ -1,10 +1,10 @@
 CASE 5
-Command : bandit -r detr-main -a vuln -l -i -f json
+Command : bandit -r w12 -a vuln -l -i -f json
 Return  : 1
 --- STDOUT ---
 {
   "errors": [],
-  "generated_at": "2025-11-10T03:05:00Z",
+  "generated_at": "2025-11-17T03:15:47Z",
   "metrics": {
     "_totals": {
       "CONFIDENCE.HIGH": 49,
@@ -15,11 +15,11 @@ Return  : 1
       "SEVERITY.LOW": 43,
       "SEVERITY.MEDIUM": 6,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 4070,
+      "loc": 3395,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/converter.py": {
+    "w12/detr-main/d2/converter.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -28,11 +28,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 68,
+      "loc": 52,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/__init__.py": {
+    "w12/detr-main/d2/detr/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -45,7 +45,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/config.py": {
+    "w12/detr-main/d2/detr/config.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -58,7 +58,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/dataset_mapper.py": {
+    "w12/detr-main/d2/detr/dataset_mapper.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -67,11 +67,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 100,
+      "loc": 94,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/detr.py": {
+    "w12/detr-main/d2/detr/detr.py": {
       "CONFIDENCE.HIGH": 4,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -80,11 +80,11 @@ Return  : 1
       "SEVERITY.LOW": 3,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 250,
+      "loc": 222,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/train_net.py": {
+    "w12/detr-main/d2/train_net.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -93,11 +93,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 126,
+      "loc": 117,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/__init__.py": {
+    "w12/detr-main/datasets/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -110,7 +110,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco.py": {
+    "w12/detr-main/datasets/coco.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -119,11 +119,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 134,
+      "loc": 122,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco_eval.py": {
+    "w12/detr-main/datasets/coco_eval.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -132,11 +132,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 198,
+      "loc": 191,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco_panoptic.py": {
+    "w12/detr-main/datasets/coco_panoptic.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -145,11 +145,11 @@ Return  : 1
       "SEVERITY.LOW": 3,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 94,
+      "loc": 72,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/panoptic_eval.py": {
+    "w12/detr-main/datasets/panoptic_eval.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -158,11 +158,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 40,
+      "loc": 35,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/transforms.py": {
+    "w12/detr-main/datasets/transforms.py": {
       "CONFIDENCE.HIGH": 8,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -171,11 +171,11 @@ Return  : 1
       "SEVERITY.LOW": 8,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 208,
+      "loc": 198,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/engine.py": {
+    "w12/detr-main/engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -184,11 +184,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 153,
+      "loc": 120,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/hubconf.py": {
+    "w12/detr-main/hubconf.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -197,11 +197,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 152,
+      "loc": 140,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/main.py": {
+    "w12/detr-main/main.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -210,11 +210,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 2,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 325,
+      "loc": 199,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/__init__.py": {
+    "w12/detr-main/models/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -227,7 +227,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/backbone.py": {
+    "w12/detr-main/models/backbone.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -236,11 +236,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 125,
+      "loc": 93,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/detr.py": {
+    "w12/detr-main/models/detr.py": {
       "CONFIDENCE.HIGH": 7,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -249,11 +249,11 @@ Return  : 1
       "SEVERITY.LOW": 7,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 332,
+      "loc": 279,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/matcher.py": {
+    "w12/detr-main/models/matcher.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -262,11 +262,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 82,
+      "loc": 58,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/position_encoding.py": {
+    "w12/detr-main/models/position_encoding.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -275,11 +275,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 88,
+      "loc": 74,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/segmentation.py": {
+    "w12/detr-main/models/segmentation.py": {
       "CONFIDENCE.HIGH": 5,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -288,11 +288,11 @@ Return  : 1
       "SEVERITY.LOW": 5,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 345,
+      "loc": 286,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/transformer.py": {
+    "w12/detr-main/models/transformer.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -301,11 +301,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 338,
+      "loc": 241,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/run_with_submitit.py": {
+    "w12/detr-main/run_with_submitit.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -314,11 +314,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 91,
+      "loc": 81,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/test_all.py": {
+    "w12/detr-main/test_all.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -327,11 +327,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 214,
+      "loc": 166,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/__init__.py": {
+    "w12/detr-main/util/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -344,7 +344,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/box_ops.py": {
+    "w12/detr-main/util/box_ops.py": {
       "CONFIDENCE.HIGH": 2,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -353,11 +353,11 @@ Return  : 1
       "SEVERITY.LOW": 2,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 56,
+      "loc": 58,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/misc.py": {
+    "w12/detr-main/util/misc.py": {
       "CONFIDENCE.HIGH": 9,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -366,11 +366,11 @@ Return  : 1
       "SEVERITY.LOW": 8,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 405,
+      "loc": 369,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/plot_utils.py": {
+    "w12/detr-main/util/plot_utils.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -379,17 +379,17 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 102,
+      "loc": 84,
       "nosec": 0,
       "skipped_tests": 0
     }
   },
   "results": [
     {
-      "code": "29     if sample_style == \"range\":\n30         assert (\n31             len(min_size) == 2\n32         ), \"more than 2 ({}) min_size(s) are provided for ranges\".format(len(min_size))\n33 \n",
+      "code": "29     if sample_style == \"range\":\n30         assert len(min_size) == 2, \"more than 2 ({}) min_size(s) are provided for ranges\".format(len(min_size))\n31 \n",
       "col_offset": 8,
-      "end_col_offset": 87,
-      "filename": "detr-main/d2/detr/dataset_mapper.py",
+      "end_col_offset": 111,
+      "filename": "w12/detr-main/d2/detr/dataset_mapper.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -399,9 +399,7 @@ Return  : 1
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
       "line_number": 30,
       "line_range": [
-        30,
-        31,
-        32
+        30
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
@@ -411,7 +409,7 @@ Return  : 1
       "code": "47         )\n48         assert len(features) == len(masks)\n49         for i, k in enumerate(features.keys()):\n",
       "col_offset": 8,
       "end_col_offset": 42,
-      "filename": "detr-main/d2/detr/detr.py",
+      "filename": "w12/detr-main/d2/detr/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -431,7 +429,7 @@ Return  : 1
       "code": "54         masks = []\n55         assert len(feature_shapes) == len(self.feature_strides)\n56         for idx, shape in enumerate(feature_shapes):\n",
       "col_offset": 8,
       "end_col_offset": 63,
-      "filename": "detr-main/d2/detr/detr.py",
+      "filename": "w12/detr-main/d2/detr/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -448,10 +446,10 @@ Return  : 1
       "test_name": "assert_used"
     },
     {
-      "code": "247         \"\"\"\n248         assert len(box_cls) == len(image_sizes)\n249         results = []\n",
+      "code": "229         \"\"\"\n230         assert len(box_cls) == len(image_sizes)\n231         results = []\n",
       "col_offset": 8,
       "end_col_offset": 47,
-      "filename": "detr-main/d2/detr/detr.py",
+      "filename": "w12/detr-main/d2/detr/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -459,19 +457,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 248,
+      "line_number": 230,
       "line_range": [
-        248
+        230
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "155     root = Path(args.coco_path)\n156     assert root.exists(), f\"provided COCO path {root} does not exist\"\n157     mode = \"instances\"\n",
+      "code": "148     root = Path(args.coco_path)\n149     assert root.exists(), f'provided COCO path {root} does not exist'\n150     mode = 'instances'\n",
       "col_offset": 4,
       "end_col_offset": 69,
-      "filename": "detr-main/datasets/coco.py",
+      "filename": "w12/detr-main/datasets/coco.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -479,9 +477,9 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 156,
+      "line_number": 149,
       "line_range": [
-        156
+        149
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
@@ -491,7 +489,7 @@ Return  : 1
       "code": "23     def __init__(self, coco_gt, iou_types):\n24         assert isinstance(iou_types, (list, tuple))\n25         coco_gt = copy.deepcopy(coco_gt)\n",
       "col_offset": 8,
       "end_col_offset": 51,
-      "filename": "detr-main/datasets/coco_eval.py",
+      "filename": "w12/detr-main/datasets/coco_eval.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -508,10 +506,10 @@ Return  : 1
       "test_name": "assert_used"
     },
     {
-      "code": "27             for img, ann in zip(self.coco[\"images\"], self.coco[\"annotations\"]):\n28                 assert img[\"file_name\"][:-4] == ann[\"file_name\"][:-4]\n29 \n",
+      "code": "25             for img, ann in zip(self.coco['images'], self.coco['annotations']):\n26                 assert img['file_name'][:-4] == ann['file_name'][:-4]\n27 \n",
       "col_offset": 16,
       "end_col_offset": 69,
-      "filename": "detr-main/datasets/coco_panoptic.py",
+      "filename": "w12/detr-main/datasets/coco_panoptic.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -519,19 +517,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 28,
+      "line_number": 26,
       "line_range": [
-        28
+        26
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "95     ann_folder_root = Path(args.coco_panoptic_path)\n96     assert (\n97         img_folder_root.exists()\n98     ), f\"provided COCO path {img_folder_root} does not exist\"\n99     assert (\n",
+      "code": "82     ann_folder_root = Path(args.coco_panoptic_path)\n83     assert img_folder_root.exists(), f'provided COCO path {img_folder_root} does not exist'\n84     assert ann_folder_root.exists(), f'provided COCO path {ann_folder_root} does not exist'\n",
       "col_offset": 4,
-      "end_col_offset": 61,
-      "filename": "detr-main/datasets/coco_panoptic.py",
+      "end_col_offset": 91,
+      "filename": "w12/detr-main/datasets/coco_panoptic.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -539,21 +537,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 96,
+      "line_number": 83,
       "line_range": [
-        96,
-        97,
-        98
+        83
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "98     ), f\"provided COCO path {img_folder_root} does not exist\"\n99     assert (\n100         ann_folder_root.exists()\n101     ), f\"provided COCO path {ann_folder_root} does not exist\"\n102     mode = \"panoptic\"\n",
+      "code": "83     assert img_folder_root.exists(), f'provided COCO path {img_folder_root} does not exist'\n84     assert ann_folder_root.exists(), f'provided COCO path {ann_folder_root} does not exist'\n85     mode = 'panoptic'\n",
       "col_offset": 4,
-      "end_col_offset": 61,
-      "filename": "detr-main/datasets/coco_panoptic.py",
+      "end_col_offset": 91,
+      "filename": "w12/detr-main/datasets/coco_panoptic.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -561,21 +557,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 99,
+      "line_number": 84,
       "line_range": [
-        99,
-        100,
-        101
+        84
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "202     def __init__(self, sizes, max_size=None):\n203         assert isinstance(sizes, (list, tuple))\n204         self.sizes = sizes\n",
+      "code": "192     def __init__(self, sizes, max_size=None):\n193         assert isinstance(sizes, (list, tuple))\n194         self.sizes = sizes\n",
       "col_offset": 8,
       "end_col_offset": 47,
-      "filename": "detr-main/datasets/transforms.py",
+      "filename": "w12/detr-main/datasets/transforms.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -583,19 +577,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 203,
+      "line_number": 193,
       "line_range": [
-        203
+        193
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "177     if args.frozen_weights is not None:\n178         assert args.masks, \"Frozen training is meant for segmentation only\"\n179     print(args)\n",
+      "code": "109     if args.frozen_weights is not None:\n110         assert args.masks, \"Frozen training is meant for segmentation only\"\n111     print(args)\n",
       "col_offset": 8,
       "end_col_offset": 75,
-      "filename": "detr-main/main.py",
+      "filename": "w12/detr-main/main.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -603,19 +597,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 178,
+      "line_number": 110,
       "line_range": [
-        178
+        110
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "100             m = tensor_list.mask\n101             assert m is not None\n102             mask = F.interpolate(m[None].float(), size=x.shape[-2:]).to(torch.bool)[0]\n",
+      "code": "76             m = tensor_list.mask\n77             assert m is not None\n78             mask = F.interpolate(m[None].float(), size=x.shape[-2:]).to(torch.bool)[0]\n",
       "col_offset": 12,
       "end_col_offset": 32,
-      "filename": "detr-main/models/backbone.py",
+      "filename": "w12/detr-main/models/backbone.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -623,19 +617,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 101,
+      "line_number": 77,
       "line_range": [
-        101
+        77
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "74         src, mask = features[-1].decompose()\n75         assert mask is not None\n76         hs = self.transformer(\n",
+      "code": "63         src, mask = features[-1].decompose()\n64         assert mask is not None\n65         hs = self.transformer(self.input_proj(src), mask, self.query_embed.weight, pos[-1])[0]\n",
       "col_offset": 8,
       "end_col_offset": 31,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -643,19 +637,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 75,
+      "line_number": 64,
       "line_range": [
-        75
+        64
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "127         \"\"\"\n128         assert \"pred_logits\" in outputs\n129         src_logits = outputs[\"pred_logits\"]\n",
+      "code": "111         \"\"\"\n112         assert 'pred_logits' in outputs\n113         src_logits = outputs['pred_logits']\n",
       "col_offset": 8,
       "end_col_offset": 39,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -663,19 +657,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 128,
+      "line_number": 112,
       "line_range": [
-        128
+        112
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "173         \"\"\"\n174         assert \"pred_boxes\" in outputs\n175         idx = self._get_src_permutation_idx(indices)\n",
+      "code": "147         \"\"\"\n148         assert 'pred_boxes' in outputs\n149         idx = self._get_src_permutation_idx(indices)\n",
       "col_offset": 8,
       "end_col_offset": 38,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -683,19 +677,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 174,
+      "line_number": 148,
       "line_range": [
-        174
+        148
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "198         \"\"\"\n199         assert \"pred_masks\" in outputs\n200 \n",
+      "code": "167         \"\"\"\n168         assert \"pred_masks\" in outputs\n169 \n",
       "col_offset": 8,
       "end_col_offset": 38,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -703,19 +697,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 199,
+      "line_number": 168,
       "line_range": [
-        199
+        168
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "250         }\n251         assert loss in loss_map, f\"do you really want to compute {loss} loss?\"\n252         return loss_map[loss](outputs, targets, indices, num_boxes, **kwargs)\n",
+      "code": "211         }\n212         assert loss in loss_map, f'do you really want to compute {loss} loss?'\n213         return loss_map[loss](outputs, targets, indices, num_boxes, **kwargs)\n",
       "col_offset": 8,
       "end_col_offset": 78,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -723,19 +717,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 251,
+      "line_number": 212,
       "line_range": [
-        251
+        212
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "314 \n315         assert len(out_logits) == len(target_sizes)\n316         assert target_sizes.shape[1] == 2\n",
+      "code": "270 \n271         assert len(out_logits) == len(target_sizes)\n272         assert target_sizes.shape[1] == 2\n",
       "col_offset": 8,
       "end_col_offset": 51,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -743,19 +737,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 315,
+      "line_number": 271,
       "line_range": [
-        315
+        271
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "315         assert len(out_logits) == len(target_sizes)\n316         assert target_sizes.shape[1] == 2\n317 \n",
+      "code": "271         assert len(out_logits) == len(target_sizes)\n272         assert target_sizes.shape[1] == 2\n273 \n",
       "col_offset": 8,
       "end_col_offset": 41,
-      "filename": "detr-main/models/detr.py",
+      "filename": "w12/detr-main/models/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -763,19 +757,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 316,
+      "line_number": 272,
       "line_range": [
-        316
+        272
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "33         self.cost_giou = cost_giou\n34         assert (\n35             cost_class != 0 or cost_bbox != 0 or cost_giou != 0\n36         ), \"all costs cant be 0\"\n37 \n",
+      "code": "31         self.cost_giou = cost_giou\n32         assert cost_class != 0 or cost_bbox != 0 or cost_giou != 0, \"all costs cant be 0\"\n33 \n",
       "col_offset": 8,
-      "end_col_offset": 32,
-      "filename": "detr-main/models/matcher.py",
+      "end_col_offset": 89,
+      "filename": "w12/detr-main/models/matcher.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -783,21 +777,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 34,
+      "line_number": 32,
       "line_range": [
-        34,
-        35,
-        36
+        32
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "33         mask = tensor_list.mask\n34         assert mask is not None\n35         not_mask = ~mask\n",
+      "code": "30         mask = tensor_list.mask\n31         assert mask is not None\n32         not_mask = ~mask\n",
       "col_offset": 8,
       "end_col_offset": 31,
-      "filename": "detr-main/models/position_encoding.py",
+      "filename": "w12/detr-main/models/position_encoding.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -805,19 +797,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 34,
+      "line_number": 31,
       "line_range": [
-        34
+        31
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "48         src, mask = features[-1].decompose()\n49         assert mask is not None\n50         src_proj = self.detr.input_proj(src)\n",
+      "code": "44         src, mask = features[-1].decompose()\n45         assert mask is not None\n46         src_proj = self.detr.input_proj(src)\n",
       "col_offset": 8,
       "end_col_offset": 31,
-      "filename": "detr-main/models/segmentation.py",
+      "filename": "w12/detr-main/models/segmentation.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -825,19 +817,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 49,
+      "line_number": 45,
       "line_range": [
-        49
+        45
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "255     def forward(self, results, outputs, orig_target_sizes, max_target_sizes):\n256         assert len(orig_target_sizes) == len(max_target_sizes)\n257         max_h, max_w = max_target_sizes.max(0)[0].tolist()\n",
+      "code": "224     def forward(self, results, outputs, orig_target_sizes, max_target_sizes):\n225         assert len(orig_target_sizes) == len(max_target_sizes)\n226         max_h, max_w = max_target_sizes.max(0)[0].tolist()\n",
       "col_offset": 8,
       "end_col_offset": 62,
-      "filename": "detr-main/models/segmentation.py",
+      "filename": "w12/detr-main/models/segmentation.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -845,19 +837,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 256,
+      "line_number": 225,
       "line_range": [
-        256
+        225
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "301             target_sizes = processed_sizes\n302         assert len(processed_sizes) == len(target_sizes)\n303         out_logits, raw_masks, raw_boxes = (\n",
+      "code": "266             target_sizes = processed_sizes\n267         assert len(processed_sizes) == len(target_sizes)\n268         out_logits, raw_masks, raw_boxes = outputs[\"pred_logits\"], outputs[\"pred_masks\"], outputs[\"pred_boxes\"]\n",
       "col_offset": 8,
       "end_col_offset": 56,
-      "filename": "detr-main/models/segmentation.py",
+      "filename": "w12/detr-main/models/segmentation.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -865,19 +857,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 302,
+      "line_number": 267,
       "line_range": [
-        302
+        267
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "307         )\n308         assert len(out_logits) == len(raw_masks) == len(target_sizes)\n309         preds = []\n",
+      "code": "268         out_logits, raw_masks, raw_boxes = outputs[\"pred_logits\"], outputs[\"pred_masks\"], outputs[\"pred_boxes\"]\n269         assert len(out_logits) == len(raw_masks) == len(target_sizes)\n270         preds = []\n",
       "col_offset": 8,
       "end_col_offset": 69,
-      "filename": "detr-main/models/segmentation.py",
+      "filename": "w12/detr-main/models/segmentation.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -885,19 +877,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 308,
+      "line_number": 269,
       "line_range": [
-        308
+        269
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "333             h, w = cur_masks.shape[-2:]\n334             assert len(cur_boxes) == len(cur_classes)\n335 \n",
+      "code": "290             h, w = cur_masks.shape[-2:]\n291             assert len(cur_boxes) == len(cur_classes)\n292 \n",
       "col_offset": 12,
       "end_col_offset": 53,
-      "filename": "detr-main/models/segmentation.py",
+      "filename": "w12/detr-main/models/segmentation.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -905,19 +897,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 334,
+      "line_number": 291,
       "line_range": [
-        334
+        291
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "48     # so do an early check\n49     assert (boxes1[:, 2:] >= boxes1[:, :2]).all()\n50     assert (boxes2[:, 2:] >= boxes2[:, :2]).all()\n",
+      "code": "50     # so do an early check\n51     assert (boxes1[:, 2:] >= boxes1[:, :2]).all()\n52     assert (boxes2[:, 2:] >= boxes2[:, :2]).all()\n",
       "col_offset": 4,
       "end_col_offset": 49,
-      "filename": "detr-main/util/box_ops.py",
+      "filename": "w12/detr-main/util/box_ops.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -925,19 +917,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 49,
+      "line_number": 51,
       "line_range": [
-        49
+        51
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "49     assert (boxes1[:, 2:] >= boxes1[:, :2]).all()\n50     assert (boxes2[:, 2:] >= boxes2[:, :2]).all()\n51     iou, union = box_iou(boxes1, boxes2)\n",
+      "code": "51     assert (boxes1[:, 2:] >= boxes1[:, :2]).all()\n52     assert (boxes2[:, 2:] >= boxes2[:, :2]).all()\n53     iou, union = box_iou(boxes1, boxes2)\n",
       "col_offset": 4,
       "end_col_offset": 49,
-      "filename": "detr-main/util/box_ops.py",
+      "filename": "w12/detr-main/util/box_ops.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -945,19 +937,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 50,
+      "line_number": 52,
       "line_range": [
-        50
+        52
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "171                 v = v.item()\n172             assert isinstance(v, (float, int))\n173             self.meters[k].update(v)\n",
+      "code": "167                 v = v.item()\n168             assert isinstance(v, (float, int))\n169             self.meters[k].update(v)\n",
       "col_offset": 12,
       "end_col_offset": 46,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -965,19 +957,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 172,
+      "line_number": 168,
       "line_range": [
-        172
+        168
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "316         if mask is not None:\n317             assert mask is not None\n318             cast_mask = mask.to(device)\n",
+      "code": "293         if mask is not None:\n294             assert mask is not None\n295             cast_mask = mask.to(device)\n",
       "col_offset": 12,
       "end_col_offset": 35,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -985,19 +977,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
-      "line_number": 317,
+      "line_number": 294,
       "line_range": [
-        317
+        294
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html",
       "test_id": "B101",
       "test_name": "assert_used"
     },
     {
-      "code": "172     def __call__(self, img: PIL.Image.Image, target: dict):\n173         w = random.randint(self.min_size, min(img.width, self.max_size))\n174         h = random.randint(self.min_size, min(img.height, self.max_size))\n",
+      "code": "162     def __call__(self, img: PIL.Image.Image, target: dict):\n163         w = random.randint(self.min_size, min(img.width, self.max_size))\n164         h = random.randint(self.min_size, min(img.height, self.max_size))\n",
       "col_offset": 12,
       "end_col_offset": 72,
-      "filename": "detr-main/datasets/transforms.py",
+      "filename": "w12/detr-main/datasets/transforms.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -1005,19 +997,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
-      "line_number": 173,
+      "line_number": 163,
       "line_range": [
-        173
+        163
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
       "test_id": "B311",
       "test_name": "blacklist"
     },
     {
-      "code": "173         w = random.randint(self.min_size, min(img.width, self.max_size))\n174         h = random.randint(self.min_size, min(img.height, self.max_size))\n175         region = T.RandomCrop.get_params(img, [h, w])\n",
+      "code": "163         w = random.randint(self.min_size, min(img.width, self.max_size))\n164         h = random.randint(self.min_size, min(img.height, self.max_size))\n165         region = T.RandomCrop.get_params(img, [h, w])\n",
       "col_offset": 12,
       "end_col_offset": 73,
-      "filename": "detr-main/datasets/transforms.py",
+      "filename": "w12/detr-main/datasets/transforms.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -1025,19 +1017,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
-      "line_number": 174,
+      "line_number": 164,
       "line_range": [
-        174
+        164
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
       "test_id": "B311",
       "test_name": "blacklist"
     },
     {
-      "code": "195     def __call__(self, img, target):\n196         if random.random() < self.p:\n197             return hflip(img, target)\n",
+      "code": "185     def __call__(self, img, target):\n186         if random.random() < self.p:\n187             return hflip(img, target)\n",
       "col_offset": 11,
       "end_col_offset": 26,
-      "filename": "detr-main/datasets/transforms.py",
+      "filename": "w12/detr-main/datasets/transforms.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -1045,19 +1037,59 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
-      "line_number": 196,
+      "line_number": 186,
       "line_range": [
-        196
+        186
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
       "test_id": "B311",
       "test_name": "blacklist"
     },
     {
-      "code": "207     def __call__(self, img, target=None):\n208         size = random.choice(self.sizes)\n209         return resize(img, target, size, self.max_size)\n",
+      "code": "197     def __call__(self, img, target=None):\n198         size = random.choice(self.sizes)\n199         return resize(img, target, size, self.max_size)\n",
       "col_offset": 15,
       "end_col_offset": 40,
-      "filename": "detr-main/datasets/transforms.py",
+      "filename": "w12/detr-main/datasets/transforms.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 198,
+      "line_range": [
+        198
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "206     def __call__(self, img, target):\n207         pad_x = random.randint(0, self.max_pad)\n208         pad_y = random.randint(0, self.max_pad)\n",
+      "col_offset": 16,
+      "end_col_offset": 47,
+      "filename": "w12/detr-main/datasets/transforms.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 207,
+      "line_range": [
+        207
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "207         pad_x = random.randint(0, self.max_pad)\n208         pad_y = random.randint(0, self.max_pad)\n209         return pad(img, target, (pad_x, pad_y))\n",
+      "col_offset": 16,
+      "end_col_offset": 47,
+      "filename": "w12/detr-main/datasets/transforms.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -1074,50 +1106,10 @@ Return  : 1
       "test_name": "blacklist"
     },
     {
-      "code": "216     def __call__(self, img, target):\n217         pad_x = random.randint(0, self.max_pad)\n218         pad_y = random.randint(0, self.max_pad)\n",
-      "col_offset": 16,
-      "end_col_offset": 47,
-      "filename": "detr-main/datasets/transforms.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 330,
-        "link": "https://cwe.mitre.org/data/definitions/330.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
-      "line_number": 217,
-      "line_range": [
-        217
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
-      "test_id": "B311",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "217         pad_x = random.randint(0, self.max_pad)\n218         pad_y = random.randint(0, self.max_pad)\n219         return pad(img, target, (pad_x, pad_y))\n",
-      "col_offset": 16,
-      "end_col_offset": 47,
-      "filename": "detr-main/datasets/transforms.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 330,
-        "link": "https://cwe.mitre.org/data/definitions/330.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
-      "line_number": 218,
-      "line_range": [
-        218
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
-      "test_id": "B311",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "233     def __call__(self, img, target):\n234         if random.random() < self.p:\n235             return self.transforms1(img, target)\n",
+      "code": "222     def __call__(self, img, target):\n223         if random.random() < self.p:\n224             return self.transforms1(img, target)\n",
       "col_offset": 11,
       "end_col_offset": 26,
-      "filename": "detr-main/datasets/transforms.py",
+      "filename": "w12/detr-main/datasets/transforms.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 330,
@@ -1125,9 +1117,9 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
-      "line_number": 234,
+      "line_number": 223,
       "line_range": [
-        234
+        223
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random",
       "test_id": "B311",
@@ -1137,7 +1129,7 @@ Return  : 1
       "code": "7 import os\n8 import subprocess\n9 import time\n",
       "col_offset": 0,
       "end_col_offset": 17,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -1157,7 +1149,7 @@ Return  : 1
       "code": "11 import datetime\n12 import pickle\n13 from packaging import version\n",
       "col_offset": 0,
       "end_col_offset": 13,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1174,10 +1166,10 @@ Return  : 1
       "test_name": "blacklist"
     },
     {
-      "code": "130         buffer = tensor.cpu().numpy().tobytes()[:size]\n131         data_list.append(pickle.loads(buffer))\n132 \n",
+      "code": "126         buffer = tensor.cpu().numpy().tobytes()[:size]\n127         data_list.append(pickle.loads(buffer))\n128 \n",
       "col_offset": 25,
       "end_col_offset": 45,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1185,19 +1177,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
-      "line_number": 131,
+      "line_number": 127,
       "line_range": [
-        131
+        127
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle",
       "test_id": "B301",
       "test_name": "blacklist"
     },
     {
-      "code": "47     else:\n48         checkpoint = torch.load(args.source_model, map_location=\"cpu\")\n49     model_to_convert = checkpoint[\"model\"]\n",
+      "code": "35     else:\n36         checkpoint = torch.load(args.source_model, map_location=\"cpu\")\n37     model_to_convert = checkpoint[\"model\"]\n",
       "col_offset": 21,
       "end_col_offset": 70,
-      "filename": "detr-main/d2/converter.py",
+      "filename": "w12/detr-main/d2/converter.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1205,19 +1197,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 48,
+      "line_number": 36,
       "line_range": [
-        48
+        36
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "126                 print(\"LOAD pre-trained weights\")\n127                 weight = torch.load(\n128                     frozen_weights, map_location=lambda storage, loc: storage\n129                 )[\"model\"]\n130                 new_weight = {}\n",
+      "code": "120                 print(\"LOAD pre-trained weights\")\n121                 weight = torch.load(frozen_weights, map_location=lambda storage, loc: storage)['model']\n122                 new_weight = {}\n",
       "col_offset": 25,
-      "end_col_offset": 17,
-      "filename": "detr-main/d2/detr/detr.py",
+      "end_col_offset": 94,
+      "filename": "w12/detr-main/d2/detr/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1225,21 +1217,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 127,
+      "line_number": 121,
       "line_range": [
-        127,
-        128,
-        129
+        121
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "257     if args.frozen_weights is not None:\n258         checkpoint = torch.load(args.frozen_weights, map_location=\"cpu\")\n259         model_without_ddp.detr.load_state_dict(checkpoint[\"model\"])\n",
+      "code": "167     if args.frozen_weights is not None:\n168         checkpoint = torch.load(args.frozen_weights, map_location='cpu')\n169         model_without_ddp.detr.load_state_dict(checkpoint['model'])\n",
       "col_offset": 21,
       "end_col_offset": 72,
-      "filename": "detr-main/main.py",
+      "filename": "w12/detr-main/main.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1247,19 +1237,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 258,
+      "line_number": 168,
       "line_range": [
-        258
+        168
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "267         else:\n268             checkpoint = torch.load(args.resume, map_location=\"cpu\")\n269         model_without_ddp.load_state_dict(checkpoint[\"model\"])\n",
+      "code": "176         else:\n177             checkpoint = torch.load(args.resume, map_location='cpu')\n178         model_without_ddp.load_state_dict(checkpoint['model'])\n",
       "col_offset": 25,
       "end_col_offset": 68,
-      "filename": "detr-main/main.py",
+      "filename": "w12/detr-main/main.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1267,19 +1257,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 268,
+      "line_number": 177,
       "line_range": [
-        268
+        177
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "102     ):\n103         data = torch.load(f)\n104         # precision is n_iou, n_points, n_cat, n_area, max_det\n",
+      "code": "85     for f, color, name in zip(files, sns.color_palette(\"Blues\", n_colors=len(files)), names):\n86         data = torch.load(f)\n87         # precision is n_iou, n_points, n_cat, n_area, max_det\n",
       "col_offset": 15,
       "end_col_offset": 28,
-      "filename": "detr-main/util/plot_utils.py",
+      "filename": "w12/detr-main/util/plot_utils.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -1287,19 +1277,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 103,
+      "line_number": 86,
       "line_range": [
-        103
+        86
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "281         sha = _run([\"git\", \"rev-parse\", \"HEAD\"])\n282         subprocess.check_output([\"git\", \"diff\"], cwd=cwd)\n283         diff = _run([\"git\", \"diff-index\", \"HEAD\"])\n",
+      "code": "258         sha = _run(['git', 'rev-parse', 'HEAD'])\n259         subprocess.check_output(['git', 'diff'], cwd=cwd)\n260         diff = _run(['git', 'diff-index', 'HEAD'])\n",
       "col_offset": 8,
       "end_col_offset": 57,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -1307,19 +1297,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Starting a process with a partial executable path",
-      "line_number": 282,
+      "line_number": 259,
       "line_range": [
-        282
+        259
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b607_start_process_with_partial_path.html",
       "test_id": "B607",
       "test_name": "start_process_with_partial_path"
     },
     {
-      "code": "274     def _run(command):\n275         return subprocess.check_output(command, cwd=cwd).decode(\"ascii\").strip()\n276 \n",
+      "code": "252     def _run(command):\n253         return subprocess.check_output(command, cwd=cwd).decode('ascii').strip()\n254     sha = 'N/A'\n",
       "col_offset": 15,
       "end_col_offset": 56,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -1327,19 +1317,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "subprocess call - check for execution of untrusted input.",
-      "line_number": 275,
+      "line_number": 253,
       "line_range": [
-        275
+        253
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html",
       "test_id": "B603",
       "test_name": "subprocess_without_shell_equals_true"
     },
     {
-      "code": "281         sha = _run([\"git\", \"rev-parse\", \"HEAD\"])\n282         subprocess.check_output([\"git\", \"diff\"], cwd=cwd)\n283         diff = _run([\"git\", \"diff-index\", \"HEAD\"])\n",
+      "code": "258         sha = _run(['git', 'rev-parse', 'HEAD'])\n259         subprocess.check_output(['git', 'diff'], cwd=cwd)\n260         diff = _run(['git', 'diff-index', 'HEAD'])\n",
       "col_offset": 8,
       "end_col_offset": 57,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 78,
@@ -1347,19 +1337,19 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "subprocess call - check for execution of untrusted input.",
-      "line_number": 282,
+      "line_number": 259,
       "line_range": [
-        282
+        259
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html",
       "test_id": "B603",
       "test_name": "subprocess_without_shell_equals_true"
     },
     {
-      "code": "285         branch = _run([\"git\", \"rev-parse\", \"--abbrev-ref\", \"HEAD\"])\n286     except Exception:\n287         pass\n288     message = f\"sha: {sha}, status: {diff}, branch: {branch}\"\n",
+      "code": "262         branch = _run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'])\n263     except Exception:\n264         pass\n265     message = f\"sha: {sha}, status: {diff}, branch: {branch}\"\n",
       "col_offset": 4,
       "end_col_offset": 12,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 703,
@@ -1367,10 +1357,10 @@ Return  : 1
       },
       "issue_severity": "LOW",
       "issue_text": "Try, Except, Pass detected.",
-      "line_number": 286,
+      "line_number": 263,
       "line_range": [
-        286,
-        287
+        263,
+        264
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html",
       "test_id": "B110",

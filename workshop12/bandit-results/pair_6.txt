@@ -1,5 +1,5 @@
 CASE 6
-Command : bandit -r detr-main -a vuln -l -iii -f html
+Command : bandit -r w12 -a vuln -l -iii -f html
 Return  : 1
 --- STDOUT ---
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ pre {
         <div class="metrics-title">
             Metrics:<br>
         </div>
-        Total lines of code: <span id="loc">4070</span><br>
+        Total lines of code: <span id="loc">3395</span><br>
         Total lines skipped (#nosec): <span id="nosec">0</span>
     </div>
 </div>
@@ -101,15 +101,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/d2/converter.py" target="_blank">detr-main/d2/converter.py</a><br>
-    <b>Line number: </b>48<br>
+    <b>File: </b><a href="w12/detr-main/d2/converter.py" target="_blank">w12/detr-main/d2/converter.py</a><br>
+    <b>Line number: </b>36<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-47	    else:
-48	        checkpoint = torch.load(args.source_model, map_location=&quot;cpu&quot;)
-49	    model_to_convert = checkpoint[&quot;model&quot;]
+35	    else:
+36	        checkpoint = torch.load(args.source_model, map_location=&quot;cpu&quot;)
+37	    model_to_convert = checkpoint[&quot;model&quot;]
 </pre>
 </div>
 
@@ -124,17 +124,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/d2/detr/dataset_mapper.py" target="_blank">detr-main/d2/detr/dataset_mapper.py</a><br>
+    <b>File: </b><a href="w12/detr-main/d2/detr/dataset_mapper.py" target="_blank">w12/detr-main/d2/detr/dataset_mapper.py</a><br>
     <b>Line number: </b>30<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
 29	    if sample_style == &quot;range&quot;:
-30	        assert (
-31	            len(min_size) == 2
-32	        ), &quot;more than 2 ({}) min_size(s) are provided for ranges&quot;.format(len(min_size))
-33	
+30	        assert len(min_size) == 2, &quot;more than 2 ({}) min_size(s) are provided for ranges&quot;.format(len(min_size))
+31	
 </pre>
 </div>
 
@@ -149,7 +147,7 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/d2/detr/detr.py" target="_blank">detr-main/d2/detr/detr.py</a><br>
+    <b>File: </b><a href="w12/detr-main/d2/detr/detr.py" target="_blank">w12/detr-main/d2/detr/detr.py</a><br>
     <b>Line number: </b>48<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
@@ -172,7 +170,7 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/d2/detr/detr.py" target="_blank">detr-main/d2/detr/detr.py</a><br>
+    <b>File: </b><a href="w12/detr-main/d2/detr/detr.py" target="_blank">w12/detr-main/d2/detr/detr.py</a><br>
     <b>Line number: </b>55<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
@@ -195,17 +193,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/d2/detr/detr.py" target="_blank">detr-main/d2/detr/detr.py</a><br>
-    <b>Line number: </b>127<br>
+    <b>File: </b><a href="w12/detr-main/d2/detr/detr.py" target="_blank">w12/detr-main/d2/detr/detr.py</a><br>
+    <b>Line number: </b>121<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-126	                print(&quot;LOAD pre-trained weights&quot;)
-127	                weight = torch.load(
-128	                    frozen_weights, map_location=lambda storage, loc: storage
-129	                )[&quot;model&quot;]
-130	                new_weight = {}
+120	                print(&quot;LOAD pre-trained weights&quot;)
+121	                weight = torch.load(frozen_weights, map_location=lambda storage, loc: storage)[&#x27;model&#x27;]
+122	                new_weight = {}
 </pre>
 </div>
 
@@ -220,15 +216,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/d2/detr/detr.py" target="_blank">detr-main/d2/detr/detr.py</a><br>
-    <b>Line number: </b>248<br>
+    <b>File: </b><a href="w12/detr-main/d2/detr/detr.py" target="_blank">w12/detr-main/d2/detr/detr.py</a><br>
+    <b>Line number: </b>230<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-247	        &quot;&quot;&quot;
-248	        assert len(box_cls) == len(image_sizes)
-249	        results = []
+229	        &quot;&quot;&quot;
+230	        assert len(box_cls) == len(image_sizes)
+231	        results = []
 </pre>
 </div>
 
@@ -243,15 +239,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/datasets/coco.py" target="_blank">detr-main/datasets/coco.py</a><br>
-    <b>Line number: </b>156<br>
+    <b>File: </b><a href="w12/detr-main/datasets/coco.py" target="_blank">w12/detr-main/datasets/coco.py</a><br>
+    <b>Line number: </b>149<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-155	    root = Path(args.coco_path)
-156	    assert root.exists(), f&quot;provided COCO path {root} does not exist&quot;
-157	    mode = &quot;instances&quot;
+148	    root = Path(args.coco_path)
+149	    assert root.exists(), f&#x27;provided COCO path {root} does not exist&#x27;
+150	    mode = &#x27;instances&#x27;
 </pre>
 </div>
 
@@ -266,7 +262,7 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/datasets/coco_eval.py" target="_blank">detr-main/datasets/coco_eval.py</a><br>
+    <b>File: </b><a href="w12/detr-main/datasets/coco_eval.py" target="_blank">w12/detr-main/datasets/coco_eval.py</a><br>
     <b>Line number: </b>24<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
@@ -289,15 +285,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/datasets/coco_panoptic.py" target="_blank">detr-main/datasets/coco_panoptic.py</a><br>
-    <b>Line number: </b>28<br>
+    <b>File: </b><a href="w12/detr-main/datasets/coco_panoptic.py" target="_blank">w12/detr-main/datasets/coco_panoptic.py</a><br>
+    <b>Line number: </b>26<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-27	            for img, ann in zip(self.coco[&quot;images&quot;], self.coco[&quot;annotations&quot;]):
-28	                assert img[&quot;file_name&quot;][:-4] == ann[&quot;file_name&quot;][:-4]
-29	
+25	            for img, ann in zip(self.coco[&#x27;images&#x27;], self.coco[&#x27;annotations&#x27;]):
+26	                assert img[&#x27;file_name&#x27;][:-4] == ann[&#x27;file_name&#x27;][:-4]
+27	
 </pre>
 </div>
 
@@ -312,17 +308,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/datasets/coco_panoptic.py" target="_blank">detr-main/datasets/coco_panoptic.py</a><br>
-    <b>Line number: </b>96<br>
+    <b>File: </b><a href="w12/detr-main/datasets/coco_panoptic.py" target="_blank">w12/detr-main/datasets/coco_panoptic.py</a><br>
+    <b>Line number: </b>83<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-95	    ann_folder_root = Path(args.coco_panoptic_path)
-96	    assert (
-97	        img_folder_root.exists()
-98	    ), f&quot;provided COCO path {img_folder_root} does not exist&quot;
-99	    assert (
+82	    ann_folder_root = Path(args.coco_panoptic_path)
+83	    assert img_folder_root.exists(), f&#x27;provided COCO path {img_folder_root} does not exist&#x27;
+84	    assert ann_folder_root.exists(), f&#x27;provided COCO path {ann_folder_root} does not exist&#x27;
 </pre>
 </div>
 
@@ -337,17 +331,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/datasets/coco_panoptic.py" target="_blank">detr-main/datasets/coco_panoptic.py</a><br>
-    <b>Line number: </b>99<br>
+    <b>File: </b><a href="w12/detr-main/datasets/coco_panoptic.py" target="_blank">w12/detr-main/datasets/coco_panoptic.py</a><br>
+    <b>Line number: </b>84<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-98	    ), f&quot;provided COCO path {img_folder_root} does not exist&quot;
-99	    assert (
-100	        ann_folder_root.exists()
-101	    ), f&quot;provided COCO path {ann_folder_root} does not exist&quot;
-102	    mode = &quot;panoptic&quot;
+83	    assert img_folder_root.exists(), f&#x27;provided COCO path {img_folder_root} does not exist&#x27;
+84	    assert ann_folder_root.exists(), f&#x27;provided COCO path {ann_folder_root} does not exist&#x27;
+85	    mode = &#x27;panoptic&#x27;
 </pre>
 </div>
 
@@ -362,15 +354,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>173<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>163<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-172	    def __call__(self, img: PIL.Image.Image, target: dict):
-173	        w = random.randint(self.min_size, min(img.width, self.max_size))
-174	        h = random.randint(self.min_size, min(img.height, self.max_size))
+162	    def __call__(self, img: PIL.Image.Image, target: dict):
+163	        w = random.randint(self.min_size, min(img.width, self.max_size))
+164	        h = random.randint(self.min_size, min(img.height, self.max_size))
 </pre>
 </div>
 
@@ -385,15 +377,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>174<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>164<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-173	        w = random.randint(self.min_size, min(img.width, self.max_size))
-174	        h = random.randint(self.min_size, min(img.height, self.max_size))
-175	        region = T.RandomCrop.get_params(img, [h, w])
+163	        w = random.randint(self.min_size, min(img.width, self.max_size))
+164	        h = random.randint(self.min_size, min(img.height, self.max_size))
+165	        region = T.RandomCrop.get_params(img, [h, w])
 </pre>
 </div>
 
@@ -408,15 +400,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>196<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>186<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-195	    def __call__(self, img, target):
-196	        if random.random() &lt; self.p:
-197	            return hflip(img, target)
+185	    def __call__(self, img, target):
+186	        if random.random() &lt; self.p:
+187	            return hflip(img, target)
 </pre>
 </div>
 
@@ -431,15 +423,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>203<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>193<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-202	    def __init__(self, sizes, max_size=None):
-203	        assert isinstance(sizes, (list, tuple))
-204	        self.sizes = sizes
+192	    def __init__(self, sizes, max_size=None):
+193	        assert isinstance(sizes, (list, tuple))
+194	        self.sizes = sizes
 </pre>
 </div>
 
@@ -454,15 +446,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>208<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>198<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-207	    def __call__(self, img, target=None):
-208	        size = random.choice(self.sizes)
-209	        return resize(img, target, size, self.max_size)
+197	    def __call__(self, img, target=None):
+198	        size = random.choice(self.sizes)
+199	        return resize(img, target, size, self.max_size)
 </pre>
 </div>
 
@@ -477,15 +469,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>217<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>207<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-216	    def __call__(self, img, target):
-217	        pad_x = random.randint(0, self.max_pad)
-218	        pad_y = random.randint(0, self.max_pad)
+206	    def __call__(self, img, target):
+207	        pad_x = random.randint(0, self.max_pad)
+208	        pad_y = random.randint(0, self.max_pad)
 </pre>
 </div>
 
@@ -500,15 +492,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>218<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>208<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-217	        pad_x = random.randint(0, self.max_pad)
-218	        pad_y = random.randint(0, self.max_pad)
-219	        return pad(img, target, (pad_x, pad_y))
+207	        pad_x = random.randint(0, self.max_pad)
+208	        pad_y = random.randint(0, self.max_pad)
+209	        return pad(img, target, (pad_x, pad_y))
 </pre>
 </div>
 
@@ -523,15 +515,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/330.html" target="_blank">CWE-330</a><br>
-    <b>File: </b><a href="detr-main/datasets/transforms.py" target="_blank">detr-main/datasets/transforms.py</a><br>
-    <b>Line number: </b>234<br>
+    <b>File: </b><a href="w12/detr-main/datasets/transforms.py" target="_blank">w12/detr-main/datasets/transforms.py</a><br>
+    <b>Line number: </b>223<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random</a><br>
 
 <div class="code">
 <pre>
-233	    def __call__(self, img, target):
-234	        if random.random() &lt; self.p:
-235	            return self.transforms1(img, target)
+222	    def __call__(self, img, target):
+223	        if random.random() &lt; self.p:
+224	            return self.transforms1(img, target)
 </pre>
 </div>
 
@@ -546,15 +538,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
-    <b>Line number: </b>178<br>
+    <b>File: </b><a href="w12/detr-main/main.py" target="_blank">w12/detr-main/main.py</a><br>
+    <b>Line number: </b>110<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-177	    if args.frozen_weights is not None:
-178	        assert args.masks, &quot;Frozen training is meant for segmentation only&quot;
-179	    print(args)
+109	    if args.frozen_weights is not None:
+110	        assert args.masks, &quot;Frozen training is meant for segmentation only&quot;
+111	    print(args)
 </pre>
 </div>
 
@@ -569,15 +561,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
-    <b>Line number: </b>258<br>
+    <b>File: </b><a href="w12/detr-main/main.py" target="_blank">w12/detr-main/main.py</a><br>
+    <b>Line number: </b>168<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-257	    if args.frozen_weights is not None:
-258	        checkpoint = torch.load(args.frozen_weights, map_location=&quot;cpu&quot;)
-259	        model_without_ddp.detr.load_state_dict(checkpoint[&quot;model&quot;])
+167	    if args.frozen_weights is not None:
+168	        checkpoint = torch.load(args.frozen_weights, map_location=&#x27;cpu&#x27;)
+169	        model_without_ddp.detr.load_state_dict(checkpoint[&#x27;model&#x27;])
 </pre>
 </div>
 
@@ -592,15 +584,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/main.py" target="_blank">detr-main/main.py</a><br>
-    <b>Line number: </b>268<br>
+    <b>File: </b><a href="w12/detr-main/main.py" target="_blank">w12/detr-main/main.py</a><br>
+    <b>Line number: </b>177<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-267	        else:
-268	            checkpoint = torch.load(args.resume, map_location=&quot;cpu&quot;)
-269	        model_without_ddp.load_state_dict(checkpoint[&quot;model&quot;])
+176	        else:
+177	            checkpoint = torch.load(args.resume, map_location=&#x27;cpu&#x27;)
+178	        model_without_ddp.load_state_dict(checkpoint[&#x27;model&#x27;])
 </pre>
 </div>
 
@@ -615,15 +607,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/backbone.py" target="_blank">detr-main/models/backbone.py</a><br>
-    <b>Line number: </b>101<br>
+    <b>File: </b><a href="w12/detr-main/models/backbone.py" target="_blank">w12/detr-main/models/backbone.py</a><br>
+    <b>Line number: </b>77<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-100	            m = tensor_list.mask
-101	            assert m is not None
-102	            mask = F.interpolate(m[None].float(), size=x.shape[-2:]).to(torch.bool)[0]
+76	            m = tensor_list.mask
+77	            assert m is not None
+78	            mask = F.interpolate(m[None].float(), size=x.shape[-2:]).to(torch.bool)[0]
 </pre>
 </div>
 
@@ -638,15 +630,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>75<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>64<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-74	        src, mask = features[-1].decompose()
-75	        assert mask is not None
-76	        hs = self.transformer(
+63	        src, mask = features[-1].decompose()
+64	        assert mask is not None
+65	        hs = self.transformer(self.input_proj(src), mask, self.query_embed.weight, pos[-1])[0]
 </pre>
 </div>
 
@@ -661,15 +653,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>128<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>112<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-127	        &quot;&quot;&quot;
-128	        assert &quot;pred_logits&quot; in outputs
-129	        src_logits = outputs[&quot;pred_logits&quot;]
+111	        &quot;&quot;&quot;
+112	        assert &#x27;pred_logits&#x27; in outputs
+113	        src_logits = outputs[&#x27;pred_logits&#x27;]
 </pre>
 </div>
 
@@ -684,15 +676,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>174<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>148<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-173	        &quot;&quot;&quot;
-174	        assert &quot;pred_boxes&quot; in outputs
-175	        idx = self._get_src_permutation_idx(indices)
+147	        &quot;&quot;&quot;
+148	        assert &#x27;pred_boxes&#x27; in outputs
+149	        idx = self._get_src_permutation_idx(indices)
 </pre>
 </div>
 
@@ -707,15 +699,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>199<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>168<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-198	        &quot;&quot;&quot;
-199	        assert &quot;pred_masks&quot; in outputs
-200	
+167	        &quot;&quot;&quot;
+168	        assert &quot;pred_masks&quot; in outputs
+169	
 </pre>
 </div>
 
@@ -730,15 +722,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>251<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>212<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-250	        }
-251	        assert loss in loss_map, f&quot;do you really want to compute {loss} loss?&quot;
-252	        return loss_map[loss](outputs, targets, indices, num_boxes, **kwargs)
+211	        }
+212	        assert loss in loss_map, f&#x27;do you really want to compute {loss} loss?&#x27;
+213	        return loss_map[loss](outputs, targets, indices, num_boxes, **kwargs)
 </pre>
 </div>
 
@@ -753,15 +745,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>315<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>271<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-314	
-315	        assert len(out_logits) == len(target_sizes)
-316	        assert target_sizes.shape[1] == 2
+270	
+271	        assert len(out_logits) == len(target_sizes)
+272	        assert target_sizes.shape[1] == 2
 </pre>
 </div>
 
@@ -776,15 +768,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/detr.py" target="_blank">detr-main/models/detr.py</a><br>
-    <b>Line number: </b>316<br>
+    <b>File: </b><a href="w12/detr-main/models/detr.py" target="_blank">w12/detr-main/models/detr.py</a><br>
+    <b>Line number: </b>272<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-315	        assert len(out_logits) == len(target_sizes)
-316	        assert target_sizes.shape[1] == 2
-317	
+271	        assert len(out_logits) == len(target_sizes)
+272	        assert target_sizes.shape[1] == 2
+273	
 </pre>
 </div>
 
@@ -799,17 +791,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/matcher.py" target="_blank">detr-main/models/matcher.py</a><br>
-    <b>Line number: </b>34<br>
+    <b>File: </b><a href="w12/detr-main/models/matcher.py" target="_blank">w12/detr-main/models/matcher.py</a><br>
+    <b>Line number: </b>32<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-33	        self.cost_giou = cost_giou
-34	        assert (
-35	            cost_class != 0 or cost_bbox != 0 or cost_giou != 0
-36	        ), &quot;all costs cant be 0&quot;
-37	
+31	        self.cost_giou = cost_giou
+32	        assert cost_class != 0 or cost_bbox != 0 or cost_giou != 0, &quot;all costs cant be 0&quot;
+33	
 </pre>
 </div>
 
@@ -824,15 +814,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/position_encoding.py" target="_blank">detr-main/models/position_encoding.py</a><br>
-    <b>Line number: </b>34<br>
+    <b>File: </b><a href="w12/detr-main/models/position_encoding.py" target="_blank">w12/detr-main/models/position_encoding.py</a><br>
+    <b>Line number: </b>31<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-33	        mask = tensor_list.mask
-34	        assert mask is not None
-35	        not_mask = ~mask
+30	        mask = tensor_list.mask
+31	        assert mask is not None
+32	        not_mask = ~mask
 </pre>
 </div>
 
@@ -847,15 +837,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/segmentation.py" target="_blank">detr-main/models/segmentation.py</a><br>
-    <b>Line number: </b>49<br>
+    <b>File: </b><a href="w12/detr-main/models/segmentation.py" target="_blank">w12/detr-main/models/segmentation.py</a><br>
+    <b>Line number: </b>45<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-48	        src, mask = features[-1].decompose()
-49	        assert mask is not None
-50	        src_proj = self.detr.input_proj(src)
+44	        src, mask = features[-1].decompose()
+45	        assert mask is not None
+46	        src_proj = self.detr.input_proj(src)
 </pre>
 </div>
 
@@ -870,15 +860,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/segmentation.py" target="_blank">detr-main/models/segmentation.py</a><br>
-    <b>Line number: </b>256<br>
+    <b>File: </b><a href="w12/detr-main/models/segmentation.py" target="_blank">w12/detr-main/models/segmentation.py</a><br>
+    <b>Line number: </b>225<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-255	    def forward(self, results, outputs, orig_target_sizes, max_target_sizes):
-256	        assert len(orig_target_sizes) == len(max_target_sizes)
-257	        max_h, max_w = max_target_sizes.max(0)[0].tolist()
+224	    def forward(self, results, outputs, orig_target_sizes, max_target_sizes):
+225	        assert len(orig_target_sizes) == len(max_target_sizes)
+226	        max_h, max_w = max_target_sizes.max(0)[0].tolist()
 </pre>
 </div>
 
@@ -893,15 +883,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/segmentation.py" target="_blank">detr-main/models/segmentation.py</a><br>
-    <b>Line number: </b>302<br>
+    <b>File: </b><a href="w12/detr-main/models/segmentation.py" target="_blank">w12/detr-main/models/segmentation.py</a><br>
+    <b>Line number: </b>267<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-301	            target_sizes = processed_sizes
-302	        assert len(processed_sizes) == len(target_sizes)
-303	        out_logits, raw_masks, raw_boxes = (
+266	            target_sizes = processed_sizes
+267	        assert len(processed_sizes) == len(target_sizes)
+268	        out_logits, raw_masks, raw_boxes = outputs[&quot;pred_logits&quot;], outputs[&quot;pred_masks&quot;], outputs[&quot;pred_boxes&quot;]
 </pre>
 </div>
 
@@ -916,15 +906,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/segmentation.py" target="_blank">detr-main/models/segmentation.py</a><br>
-    <b>Line number: </b>308<br>
+    <b>File: </b><a href="w12/detr-main/models/segmentation.py" target="_blank">w12/detr-main/models/segmentation.py</a><br>
+    <b>Line number: </b>269<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-307	        )
-308	        assert len(out_logits) == len(raw_masks) == len(target_sizes)
-309	        preds = []
+268	        out_logits, raw_masks, raw_boxes = outputs[&quot;pred_logits&quot;], outputs[&quot;pred_masks&quot;], outputs[&quot;pred_boxes&quot;]
+269	        assert len(out_logits) == len(raw_masks) == len(target_sizes)
+270	        preds = []
 </pre>
 </div>
 
@@ -939,15 +929,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/models/segmentation.py" target="_blank">detr-main/models/segmentation.py</a><br>
-    <b>Line number: </b>334<br>
+    <b>File: </b><a href="w12/detr-main/models/segmentation.py" target="_blank">w12/detr-main/models/segmentation.py</a><br>
+    <b>Line number: </b>291<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-333	            h, w = cur_masks.shape[-2:]
-334	            assert len(cur_boxes) == len(cur_classes)
-335	
+290	            h, w = cur_masks.shape[-2:]
+291	            assert len(cur_boxes) == len(cur_classes)
+292	
 </pre>
 </div>
 
@@ -962,15 +952,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/util/box_ops.py" target="_blank">detr-main/util/box_ops.py</a><br>
-    <b>Line number: </b>49<br>
+    <b>File: </b><a href="w12/detr-main/util/box_ops.py" target="_blank">w12/detr-main/util/box_ops.py</a><br>
+    <b>Line number: </b>51<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-48	    # so do an early check
-49	    assert (boxes1[:, 2:] &gt;= boxes1[:, :2]).all()
-50	    assert (boxes2[:, 2:] &gt;= boxes2[:, :2]).all()
+50	    # so do an early check
+51	    assert (boxes1[:, 2:] &gt;= boxes1[:, :2]).all()
+52	    assert (boxes2[:, 2:] &gt;= boxes2[:, :2]).all()
 </pre>
 </div>
 
@@ -985,15 +975,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/util/box_ops.py" target="_blank">detr-main/util/box_ops.py</a><br>
-    <b>Line number: </b>50<br>
+    <b>File: </b><a href="w12/detr-main/util/box_ops.py" target="_blank">w12/detr-main/util/box_ops.py</a><br>
+    <b>Line number: </b>52<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-49	    assert (boxes1[:, 2:] &gt;= boxes1[:, :2]).all()
-50	    assert (boxes2[:, 2:] &gt;= boxes2[:, :2]).all()
-51	    iou, union = box_iou(boxes1, boxes2)
+51	    assert (boxes1[:, 2:] &gt;= boxes1[:, :2]).all()
+52	    assert (boxes2[:, 2:] &gt;= boxes2[:, :2]).all()
+53	    iou, union = box_iou(boxes1, boxes2)
 </pre>
 </div>
 
@@ -1008,7 +998,7 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
     <b>Line number: </b>8<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b404-import-subprocess" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b404-import-subprocess</a><br>
 
@@ -1031,7 +1021,7 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
     <b>Line number: </b>12<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b403-import-pickle" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b403-import-pickle</a><br>
 
@@ -1054,15 +1044,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>131<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>127<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle" target="_blank">https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle</a><br>
 
 <div class="code">
 <pre>
-130	        buffer = tensor.cpu().numpy().tobytes()[:size]
-131	        data_list.append(pickle.loads(buffer))
-132	
+126	        buffer = tensor.cpu().numpy().tobytes()[:size]
+127	        data_list.append(pickle.loads(buffer))
+128	
 </pre>
 </div>
 
@@ -1077,15 +1067,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>172<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>168<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-171	                v = v.item()
-172	            assert isinstance(v, (float, int))
-173	            self.meters[k].update(v)
+167	                v = v.item()
+168	            assert isinstance(v, (float, int))
+169	            self.meters[k].update(v)
 </pre>
 </div>
 
@@ -1100,15 +1090,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>275<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>253<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html</a><br>
 
 <div class="code">
 <pre>
-274	    def _run(command):
-275	        return subprocess.check_output(command, cwd=cwd).decode(&quot;ascii&quot;).strip()
-276	
+252	    def _run(command):
+253	        return subprocess.check_output(command, cwd=cwd).decode(&#x27;ascii&#x27;).strip()
+254	    sha = &#x27;N/A&#x27;
 </pre>
 </div>
 
@@ -1123,15 +1113,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>282<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>259<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b607_start_process_with_partial_path.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b607_start_process_with_partial_path.html</a><br>
 
 <div class="code">
 <pre>
-281	        sha = _run([&quot;git&quot;, &quot;rev-parse&quot;, &quot;HEAD&quot;])
-282	        subprocess.check_output([&quot;git&quot;, &quot;diff&quot;], cwd=cwd)
-283	        diff = _run([&quot;git&quot;, &quot;diff-index&quot;, &quot;HEAD&quot;])
+258	        sha = _run([&#x27;git&#x27;, &#x27;rev-parse&#x27;, &#x27;HEAD&#x27;])
+259	        subprocess.check_output([&#x27;git&#x27;, &#x27;diff&#x27;], cwd=cwd)
+260	        diff = _run([&#x27;git&#x27;, &#x27;diff-index&#x27;, &#x27;HEAD&#x27;])
 </pre>
 </div>
 
@@ -1146,15 +1136,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>282<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>259<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b603_subprocess_without_shell_equals_true.html</a><br>
 
 <div class="code">
 <pre>
-281	        sha = _run([&quot;git&quot;, &quot;rev-parse&quot;, &quot;HEAD&quot;])
-282	        subprocess.check_output([&quot;git&quot;, &quot;diff&quot;], cwd=cwd)
-283	        diff = _run([&quot;git&quot;, &quot;diff-index&quot;, &quot;HEAD&quot;])
+258	        sha = _run([&#x27;git&#x27;, &#x27;rev-parse&#x27;, &#x27;HEAD&#x27;])
+259	        subprocess.check_output([&#x27;git&#x27;, &#x27;diff&#x27;], cwd=cwd)
+260	        diff = _run([&#x27;git&#x27;, &#x27;diff-index&#x27;, &#x27;HEAD&#x27;])
 </pre>
 </div>
 
@@ -1169,16 +1159,16 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>286<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>263<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b110_try_except_pass.html</a><br>
 
 <div class="code">
 <pre>
-285	        branch = _run([&quot;git&quot;, &quot;rev-parse&quot;, &quot;--abbrev-ref&quot;, &quot;HEAD&quot;])
-286	    except Exception:
-287	        pass
-288	    message = f&quot;sha: {sha}, status: {diff}, branch: {branch}&quot;
+262	        branch = _run([&#x27;git&#x27;, &#x27;rev-parse&#x27;, &#x27;--abbrev-ref&#x27;, &#x27;HEAD&#x27;])
+263	    except Exception:
+264	        pass
+265	    message = f&quot;sha: {sha}, status: {diff}, branch: {branch}&quot;
 </pre>
 </div>
 
@@ -1193,15 +1183,15 @@ pre {
     <b>Severity: </b>LOW<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/703.html" target="_blank">CWE-703</a><br>
-    <b>File: </b><a href="detr-main/util/misc.py" target="_blank">detr-main/util/misc.py</a><br>
-    <b>Line number: </b>317<br>
+    <b>File: </b><a href="w12/detr-main/util/misc.py" target="_blank">w12/detr-main/util/misc.py</a><br>
+    <b>Line number: </b>294<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html</a><br>
 
 <div class="code">
 <pre>
-316	        if mask is not None:
-317	            assert mask is not None
-318	            cast_mask = mask.to(device)
+293	        if mask is not None:
+294	            assert mask is not None
+295	            cast_mask = mask.to(device)
 </pre>
 </div>
 
@@ -1216,15 +1206,15 @@ pre {
     <b>Severity: </b>MEDIUM<br>
     <b>Confidence: </b>HIGH<br>
     <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/502.html" target="_blank">CWE-502</a><br>
-    <b>File: </b><a href="detr-main/util/plot_utils.py" target="_blank">detr-main/util/plot_utils.py</a><br>
-    <b>Line number: </b>103<br>
+    <b>File: </b><a href="w12/detr-main/util/plot_utils.py" target="_blank">w12/detr-main/util/plot_utils.py</a><br>
+    <b>Line number: </b>86<br>
     <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html" target="_blank">https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html</a><br>
 
 <div class="code">
 <pre>
-102	    ):
-103	        data = torch.load(f)
-104	        # precision is n_iou, n_points, n_cat, n_area, max_det
+85	    for f, color, name in zip(files, sns.color_palette(&quot;Blues&quot;, n_colors=len(files)), names):
+86	        data = torch.load(f)
+87	        # precision is n_iou, n_points, n_cat, n_area, max_det
 </pre>
 </div>
 

@@ -1,10 +1,10 @@
 CASE 4
-Command : bandit -r detr-main -a file -ll -iii -f json
+Command : bandit -r w12 -a file -ll -iii -f json
 Return  : 1
 --- STDOUT ---
 {
   "errors": [],
-  "generated_at": "2025-11-10T03:05:00Z",
+  "generated_at": "2025-11-17T03:15:46Z",
   "metrics": {
     "_totals": {
       "CONFIDENCE.HIGH": 49,
@@ -15,11 +15,11 @@ Return  : 1
       "SEVERITY.LOW": 43,
       "SEVERITY.MEDIUM": 6,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 4070,
+      "loc": 3395,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/converter.py": {
+    "w12/detr-main/d2/converter.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -28,11 +28,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 68,
+      "loc": 52,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/__init__.py": {
+    "w12/detr-main/d2/detr/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -45,7 +45,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/config.py": {
+    "w12/detr-main/d2/detr/config.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -58,7 +58,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/dataset_mapper.py": {
+    "w12/detr-main/d2/detr/dataset_mapper.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -67,11 +67,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 100,
+      "loc": 94,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/detr/detr.py": {
+    "w12/detr-main/d2/detr/detr.py": {
       "CONFIDENCE.HIGH": 4,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -80,11 +80,11 @@ Return  : 1
       "SEVERITY.LOW": 3,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 250,
+      "loc": 222,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/d2/train_net.py": {
+    "w12/detr-main/d2/train_net.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -93,11 +93,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 126,
+      "loc": 117,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/__init__.py": {
+    "w12/detr-main/datasets/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -110,7 +110,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco.py": {
+    "w12/detr-main/datasets/coco.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -119,11 +119,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 134,
+      "loc": 122,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco_eval.py": {
+    "w12/detr-main/datasets/coco_eval.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -132,11 +132,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 198,
+      "loc": 191,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/coco_panoptic.py": {
+    "w12/detr-main/datasets/coco_panoptic.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -145,11 +145,11 @@ Return  : 1
       "SEVERITY.LOW": 3,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 94,
+      "loc": 72,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/panoptic_eval.py": {
+    "w12/detr-main/datasets/panoptic_eval.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -158,11 +158,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 40,
+      "loc": 35,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/datasets/transforms.py": {
+    "w12/detr-main/datasets/transforms.py": {
       "CONFIDENCE.HIGH": 8,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -171,11 +171,11 @@ Return  : 1
       "SEVERITY.LOW": 8,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 208,
+      "loc": 198,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/engine.py": {
+    "w12/detr-main/engine.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -184,11 +184,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 153,
+      "loc": 120,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/hubconf.py": {
+    "w12/detr-main/hubconf.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -197,11 +197,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 152,
+      "loc": 140,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/main.py": {
+    "w12/detr-main/main.py": {
       "CONFIDENCE.HIGH": 3,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -210,11 +210,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 2,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 325,
+      "loc": 199,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/__init__.py": {
+    "w12/detr-main/models/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -227,7 +227,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/backbone.py": {
+    "w12/detr-main/models/backbone.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -236,11 +236,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 125,
+      "loc": 93,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/detr.py": {
+    "w12/detr-main/models/detr.py": {
       "CONFIDENCE.HIGH": 7,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -249,11 +249,11 @@ Return  : 1
       "SEVERITY.LOW": 7,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 332,
+      "loc": 279,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/matcher.py": {
+    "w12/detr-main/models/matcher.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -262,11 +262,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 82,
+      "loc": 58,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/position_encoding.py": {
+    "w12/detr-main/models/position_encoding.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -275,11 +275,11 @@ Return  : 1
       "SEVERITY.LOW": 1,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 88,
+      "loc": 74,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/segmentation.py": {
+    "w12/detr-main/models/segmentation.py": {
       "CONFIDENCE.HIGH": 5,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -288,11 +288,11 @@ Return  : 1
       "SEVERITY.LOW": 5,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 345,
+      "loc": 286,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/models/transformer.py": {
+    "w12/detr-main/models/transformer.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -301,11 +301,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 338,
+      "loc": 241,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/run_with_submitit.py": {
+    "w12/detr-main/run_with_submitit.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -314,11 +314,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 91,
+      "loc": 81,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/test_all.py": {
+    "w12/detr-main/test_all.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -327,11 +327,11 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 214,
+      "loc": 166,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/__init__.py": {
+    "w12/detr-main/util/__init__.py": {
       "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -344,7 +344,7 @@ Return  : 1
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/box_ops.py": {
+    "w12/detr-main/util/box_ops.py": {
       "CONFIDENCE.HIGH": 2,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -353,11 +353,11 @@ Return  : 1
       "SEVERITY.LOW": 2,
       "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 56,
+      "loc": 58,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/misc.py": {
+    "w12/detr-main/util/misc.py": {
       "CONFIDENCE.HIGH": 9,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -366,11 +366,11 @@ Return  : 1
       "SEVERITY.LOW": 8,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 405,
+      "loc": 369,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "detr-main/util/plot_utils.py": {
+    "w12/detr-main/util/plot_utils.py": {
       "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
@@ -379,17 +379,17 @@ Return  : 1
       "SEVERITY.LOW": 0,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 102,
+      "loc": 84,
       "nosec": 0,
       "skipped_tests": 0
     }
   },
   "results": [
     {
-      "code": "47     else:\n48         checkpoint = torch.load(args.source_model, map_location=\"cpu\")\n49     model_to_convert = checkpoint[\"model\"]\n",
+      "code": "35     else:\n36         checkpoint = torch.load(args.source_model, map_location=\"cpu\")\n37     model_to_convert = checkpoint[\"model\"]\n",
       "col_offset": 21,
       "end_col_offset": 70,
-      "filename": "detr-main/d2/converter.py",
+      "filename": "w12/detr-main/d2/converter.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -397,19 +397,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 48,
+      "line_number": 36,
       "line_range": [
-        48
+        36
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "126                 print(\"LOAD pre-trained weights\")\n127                 weight = torch.load(\n128                     frozen_weights, map_location=lambda storage, loc: storage\n129                 )[\"model\"]\n130                 new_weight = {}\n",
+      "code": "120                 print(\"LOAD pre-trained weights\")\n121                 weight = torch.load(frozen_weights, map_location=lambda storage, loc: storage)['model']\n122                 new_weight = {}\n",
       "col_offset": 25,
-      "end_col_offset": 17,
-      "filename": "detr-main/d2/detr/detr.py",
+      "end_col_offset": 94,
+      "filename": "w12/detr-main/d2/detr/detr.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -417,21 +417,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 127,
+      "line_number": 121,
       "line_range": [
-        127,
-        128,
-        129
+        121
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "257     if args.frozen_weights is not None:\n258         checkpoint = torch.load(args.frozen_weights, map_location=\"cpu\")\n259         model_without_ddp.detr.load_state_dict(checkpoint[\"model\"])\n",
+      "code": "167     if args.frozen_weights is not None:\n168         checkpoint = torch.load(args.frozen_weights, map_location='cpu')\n169         model_without_ddp.detr.load_state_dict(checkpoint['model'])\n",
       "col_offset": 21,
       "end_col_offset": 72,
-      "filename": "detr-main/main.py",
+      "filename": "w12/detr-main/main.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -439,19 +437,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 258,
+      "line_number": 168,
       "line_range": [
-        258
+        168
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "267         else:\n268             checkpoint = torch.load(args.resume, map_location=\"cpu\")\n269         model_without_ddp.load_state_dict(checkpoint[\"model\"])\n",
+      "code": "176         else:\n177             checkpoint = torch.load(args.resume, map_location='cpu')\n178         model_without_ddp.load_state_dict(checkpoint['model'])\n",
       "col_offset": 25,
       "end_col_offset": 68,
-      "filename": "detr-main/main.py",
+      "filename": "w12/detr-main/main.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -459,19 +457,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 268,
+      "line_number": 177,
       "line_range": [
-        268
+        177
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",
       "test_name": "pytorch_load"
     },
     {
-      "code": "130         buffer = tensor.cpu().numpy().tobytes()[:size]\n131         data_list.append(pickle.loads(buffer))\n132 \n",
+      "code": "126         buffer = tensor.cpu().numpy().tobytes()[:size]\n127         data_list.append(pickle.loads(buffer))\n128 \n",
       "col_offset": 25,
       "end_col_offset": 45,
-      "filename": "detr-main/util/misc.py",
+      "filename": "w12/detr-main/util/misc.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -479,19 +477,19 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
-      "line_number": 131,
+      "line_number": 127,
       "line_range": [
-        131
+        127
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle",
       "test_id": "B301",
       "test_name": "blacklist"
     },
     {
-      "code": "102     ):\n103         data = torch.load(f)\n104         # precision is n_iou, n_points, n_cat, n_area, max_det\n",
+      "code": "85     for f, color, name in zip(files, sns.color_palette(\"Blues\", n_colors=len(files)), names):\n86         data = torch.load(f)\n87         # precision is n_iou, n_points, n_cat, n_area, max_det\n",
       "col_offset": 15,
       "end_col_offset": 28,
-      "filename": "detr-main/util/plot_utils.py",
+      "filename": "w12/detr-main/util/plot_utils.py",
       "issue_confidence": "HIGH",
       "issue_cwe": {
         "id": 502,
@@ -499,9 +497,9 @@ Return  : 1
       },
       "issue_severity": "MEDIUM",
       "issue_text": "Use of unsafe PyTorch load",
-      "line_number": 103,
+      "line_number": 86,
       "line_range": [
-        103
+        86
       ],
       "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html",
       "test_id": "B614",

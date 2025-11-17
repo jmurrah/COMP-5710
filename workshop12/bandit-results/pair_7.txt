@@ -1,13 +1,13 @@
 CASE 7
-Command : bandit -r detr-main -a file -ll -i -f custom
+Command : bandit -r w12 -a file -ll -i -f custom
 Return  : 1
 --- STDOUT ---
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/converter.py:48: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/detr/detr.py:127: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/main.py:258: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/main.py:268: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:131: B301[bandit]: MEDIUM: Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/plot_utils.py:103: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/converter.py:36: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/detr/detr.py:121: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/main.py:168: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/main.py:177: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:127: B301[bandit]: MEDIUM: Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/plot_utils.py:86: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None

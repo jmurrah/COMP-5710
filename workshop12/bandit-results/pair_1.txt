@@ -1,14 +1,14 @@
 CASE 1
-Command : bandit -r detr-main -a vuln -ll -ii -f csv
+Command : bandit -r w12 -a vuln -ll -ii -f csv
 Return  : 1
 --- STDOUT ---
 filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info
-detr-main/d2/converter.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,48,21,70,[48],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-detr-main/d2/detr/detr.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,127,25,17,"[127, 128, 129]",https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-detr-main/main.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,258,21,72,[258],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-detr-main/main.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,268,25,68,[268],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
-detr-main/util/misc.py,blacklist,B301,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,"Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",131,25,45,[131],https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
-detr-main/util/plot_utils.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,103,15,28,[103],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+w12/detr-main/d2/converter.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,36,21,70,[36],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+w12/detr-main/d2/detr/detr.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,121,25,94,[121],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+w12/detr-main/main.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,168,21,72,[168],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+w12/detr-main/main.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,177,25,68,[177],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
+w12/detr-main/util/misc.py,blacklist,B301,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,"Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",127,25,45,[127],https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b301-pickle
+w12/detr-main/util/plot_utils.py,pytorch_load,B614,MEDIUM,HIGH,https://cwe.mitre.org/data/definitions/502.html,Use of unsafe PyTorch load,86,15,28,[86],https://bandit.readthedocs.io/en/1.8.6/plugins/b614_pytorch_load.html
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None

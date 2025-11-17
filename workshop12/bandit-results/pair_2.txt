@@ -1,5 +1,5 @@
 CASE 2
-Command : bandit -r detr-main -a vuln -lll -iii -f custom
+Command : bandit -r w12 -a vuln -lll -iii -f custom
 Return  : 0
 --- STDOUT ---
 

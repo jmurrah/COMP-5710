@@ -1,56 +1,56 @@
 CASE 21
-Command : bandit -r detr-main -a file -l -i -f custom
+Command : bandit -r w12 -a file -l -i -f custom
 Return  : 1
 --- STDOUT ---
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/converter.py:48: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/detr/dataset_mapper.py:30: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/detr/detr.py:48: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/detr/detr.py:55: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/detr/detr.py:127: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/d2/detr/detr.py:248: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/coco.py:156: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/coco_eval.py:24: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/coco_panoptic.py:28: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/coco_panoptic.py:96: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/coco_panoptic.py:99: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:173: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:174: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:196: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:203: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:208: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:217: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:218: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/datasets/transforms.py:234: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/main.py:178: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/main.py:258: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/main.py:268: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/backbone.py:101: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:75: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:128: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:174: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:199: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:251: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:315: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/detr.py:316: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/matcher.py:34: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/position_encoding.py:34: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/segmentation.py:49: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/segmentation.py:256: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/segmentation.py:302: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/segmentation.py:308: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/models/segmentation.py:334: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/box_ops.py:49: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/box_ops.py:50: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:8: B404[bandit]: LOW: Consider possible security implications associated with the subprocess module.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:12: B403[bandit]: LOW: Consider possible security implications associated with pickle module.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:131: B301[bandit]: MEDIUM: Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:172: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:275: B603[bandit]: LOW: subprocess call - check for execution of untrusted input.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:282: B607[bandit]: LOW: Starting a process with a partial executable path
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:282: B603[bandit]: LOW: subprocess call - check for execution of untrusted input.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:286: B110[bandit]: LOW: Try, Except, Pass detected.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/misc.py:317: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
-/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/detr-main/util/plot_utils.py:103: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/converter.py:36: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/detr/dataset_mapper.py:30: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/detr/detr.py:48: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/detr/detr.py:55: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/detr/detr.py:121: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/d2/detr/detr.py:230: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/coco.py:149: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/coco_eval.py:24: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/coco_panoptic.py:26: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/coco_panoptic.py:83: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/coco_panoptic.py:84: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:163: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:164: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:186: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:193: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:198: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:207: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:208: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/datasets/transforms.py:223: B311[bandit]: LOW: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/main.py:110: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/main.py:168: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/main.py:177: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/backbone.py:77: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:64: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:112: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:148: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:168: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:212: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:271: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/detr.py:272: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/matcher.py:32: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/position_encoding.py:31: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/segmentation.py:45: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/segmentation.py:225: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/segmentation.py:267: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/segmentation.py:269: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/models/segmentation.py:291: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/box_ops.py:51: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/box_ops.py:52: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:8: B404[bandit]: LOW: Consider possible security implications associated with the subprocess module.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:12: B403[bandit]: LOW: Consider possible security implications associated with pickle module.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:127: B301[bandit]: MEDIUM: Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:168: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:253: B603[bandit]: LOW: subprocess call - check for execution of untrusted input.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:259: B607[bandit]: LOW: Starting a process with a partial executable path
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:259: B603[bandit]: LOW: subprocess call - check for execution of untrusted input.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:263: B110[bandit]: LOW: Try, Except, Pass detected.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/misc.py:294: B101[bandit]: LOW: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+/mnt/c/Users/jacob/Projects/COMP-5710/workshop12/w12/detr-main/util/plot_utils.py:86: B614[bandit]: MEDIUM: Use of unsafe PyTorch load
 --- STDERR ---
 [main]	INFO	profile include tests: None
 [main]	INFO	profile exclude tests: None
