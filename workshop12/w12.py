@@ -1,3 +1,9 @@
+"""
+COMP-5710 Workshop 12: Pairwise Testing
+Author: Jacob Murrah
+Date: 11/20/2025
+"""
+
 from collections import OrderedDict
 from allpairspy import AllPairs
 
