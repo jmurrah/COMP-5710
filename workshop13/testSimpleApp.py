@@ -3,7 +3,6 @@ from unittest.mock import patch
 from simpleApp import app
 import sys
 
-# Expected messages kept separate from app values
 EXPECTED_WELCOME = "Welcome to a Simple Flask API!"
 EXPECTED_SQA = "Welcome to the SQA course!"
 EXPECTED_SSP = "Secure Software Process"
