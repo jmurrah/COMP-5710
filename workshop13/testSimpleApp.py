@@ -1,3 +1,9 @@
+"""
+COMP-5710 Workshop 13: Functional Testing (test file)
+Author: Jacob Murrah
+Date: 12/2/2025
+"""
+
 import unittest
 from unittest.mock import patch
 from simpleApp import app

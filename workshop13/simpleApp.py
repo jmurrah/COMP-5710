@@ -1,3 +1,9 @@
+"""
+COMP-5710 Workshop 13: Functional Testing (app file)
+Author: Jacob Murrah
+Date: 12/2/2025
+"""
+
 from flask import Flask
 import sys
 
