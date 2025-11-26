@@ -1,18 +1,49 @@
-from flask import Flask, request, jsonify
+from flask import Flask
+import sys
 
+WELCOME_MESSAGE = "Welcome to a Simple Flask API!"
+SQA_MESSAGE = "Welcome to the SQA course!"
+SSP_MESSAGE = "Secure Software Process"
+VANITY_MESSAGE = "Jacob Murrah"
+MYPYTHON_MESSAGE = sys.version
+CSSE_MESSAGE = "Department of Computer Science and Software Engineering"
 
 app = Flask(__name__)
 
-# Define the root endpoint for GET requests
-@app.route('/', methods=['GET'])
+
+def as_h1(text):
+    return f"<h1>{text}</h1>"
+
+
+@app.route("/", methods=["GET"])
 def home():
-    return "<h1>Welcome to a Simple Flask API!</h1>"
+    return as_h1(WELCOME_MESSAGE)
 
-# Define an endpoint for GET requests
-@app.route('/sqa', methods=['GET'])
+
+@app.route("/sqa", methods=["GET"])
 def greetSQA():
-    return "<h1>Welcome to the SQA course!</h1>"
+    return as_h1(SQA_MESSAGE)
 
 
-if __name__ == '__main__':
+@app.route("/ssp", methods=["GET"])
+def greetSSP():
+    return as_h1(SSP_MESSAGE)
+
+
+@app.route("/vanity", methods=["GET"])
+def greetVanity():
+    return as_h1(VANITY_MESSAGE)
+
+
+@app.route("/mypython", methods=["GET"])
+def greetMyPython():
+    return as_h1(MYPYTHON_MESSAGE)
+
+
+@app.route("/csse", methods=["GET"])
+def greetCSSE():
+    return as_h1(CSSE_MESSAGE)
+
+
+if __name__ == "__main__":
     app.run(debug=True)
