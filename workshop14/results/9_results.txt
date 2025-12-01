@@ -1,0 +1,182 @@
+============================================================
+Results for Binary File: 9
+============================================================
+Number of Nodes: 132
+Number of Edges: 183
+Heap Base Memory Address: 0xc0000000
+
+--- Memory Ranges ---
+9               : 0x8048000 - 0x804a0df
+cle##externs    : 0x8100000 - 0x8100038
+cle##externs    : 0x8200000 - 0x8207fff
+cle##tls        : 0x8300000 - 0x8314807
+cle##kernel     : 0x8400000 - 0x8407fff
+
+--- Control Flow Graph Visualization ---
+0x80485f0 <_start>
+└── 0x8048590 <block> (via Call)
+    └── 0x8100028 <__libc_start_main> (via Boring)
+        ├── 0x804887a <main> (via Call)
+        │   ├── 0x80485b0 <block> (via Call)
+        │   │   └── 0x8100030 <memset> (via Boring)
+        │   │       ├── 0x80487c4 <ignore_me+0x5c> (via Ret)
+        │   │       │   ├── 0x8048530 <block> (via Call)
+        │   │       │   │   └── 0x8100010 <unlink> (via Boring)
+        │   │       │   │       ├── 0x80487d4 <ignore_me+0x6c> (via Ret)
+        │   │       │   │       │   ├── 0x80485a0 <block> (via Call)
+        │   │       │   │       │   │   └── 0x810002c <fopen> (via Boring)
+        │   │       │   │       │   │       ├── 0x80487e9 <ignore_me+0x81> (via Ret)
+        │   │       │   │       │   │       │   ├── 0x8048550 <block> (via Call)
+        │   │       │   │       │   │       │   │   └── 0x8100018 <fwrite> (via Boring)
+        │   │       │   │       │   │       │   │       ├── 0x8048800 <ignore_me+0x98> (via Ret)
+        │   │       │   │       │   │       │   │       │   ├── 0x8048540 <block> (via Call)
+        │   │       │   │       │   │       │   │       │   │   └── 0x8100014 <fseek> (via Boring)
+        │   │       │   │       │   │       │   │       │   │       ├── 0x8048812 <ignore_me+0xaa> (via Ret)
+        │   │       │   │       │   │       │   │       │   │       │   ├── 0x8048500 <block> (via Call)
+        │   │       │   │       │   │       │   │       │   │       │   │   └── 0x8100004 <__isoc99_fscanf> (via Boring)
+        │   │       │   │       │   │       │   │       │   │       │   │       └── 0x8048829 <ignore_me+0xc1> (via Ret)
+        │   │       │   │       │   │       │   │       │   │       │   │           ├── 0x8048540 <block> (via Call) -> (ref 0x8048540)
+        │   │       │   │       │   │       │   │       │   │       │   │           └── 0x804883b <ignore_me+0xd3> (via FakeRet)
+        │   │       │   │       │   │       │   │       │   │       │   │               ├── 0x8048550 <block> (via Call) -> (ref 0x8048550)
+        │   │       │   │       │   │       │   │       │   │       │   │               └── 0x8048850 <ignore_me+0xe8> (via FakeRet)
+        │   │       │   │       │   │       │   │       │   │       │   │                   ├── 0x8048510 <block> (via Call)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │   └── 0x8100008 <fclose> (via Boring)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       ├── 0x804885e <ignore_me+0xf6> (via Ret)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │   ├── 0x8048870 <ignore_me+0x108> (via Boring)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │   │   └── 0x8048520 <block> (via Call)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │   │       └── 0x810000c <__stack_chk_fail> (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │   │           Boring)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │   └── 0x8048875 <ignore_me+0x10d> (via Boring)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │       └── 0x80488d3 <main+0x59> (via Ret)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │           ├── 0x80485b0 <block> (via Call) -> 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │           │   (ref 0x80485b0)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │           └── 0x80488e7 <main+0x6d> (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │               FakeRet)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │               ├── 0x80485a0 <block> (via Call) 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │               │   -> (ref 0x80485a0)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │               └── 0x80488fc <main+0x82> (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   FakeRet)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   ├── 0x8048560 <block> (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │   Call)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │   └── 0x810001c <fread> (via
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │       Boring)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │       └── 0x8048918 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           <main+0x9e> (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           Ret)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           ├── 0x8048510 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           │   <block> (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           │   Call) -> (ref 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           │   0x8048510)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │           └── 0x8048929 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               <main+0xaf> 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               (via FakeRet)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               ├── 0x8048530 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               │   <block> 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               │   (via Call)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               │   -> (ref 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               │   0x8048530)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │               └── 0x8048939 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                   <main+0xbf
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                   > (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                   FakeRet)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                   └── 0x8048
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       972 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       <main+
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       0xf8> 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       (via 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       Boring
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       )
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       ├── 0x
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   80
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   48
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   94
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   5 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   <m
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   ai
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   n+
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   0x
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   cb
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   > 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   (v
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   ia
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │    
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   Bo
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   ri
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   ng
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       │   )
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                       └── 0x
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           80
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           48
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           97
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           8 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           <m
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           ai
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           n+
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           0x
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           fe
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           > 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           (v
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           ia
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                            
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           Bo
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           ri
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           ng
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   │                           )
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                   └── 0x8048918 <main+0x9e> (via
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                       FakeRet) -> (ref 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       │                       0x8048918)
+        │   │       │   │       │   │       │   │       │   │       │   │                   │       └── 0x8048929 <main+0xaf> (via Ret) -> (ref 
+        │   │       │   │       │   │       │   │       │   │       │   │                   │           0x8048929)
+        │   │       │   │       │   │       │   │       │   │       │   │                   └── 0x804885e <ignore_me+0xf6> (via FakeRet) -> (ref 
+        │   │       │   │       │   │       │   │       │   │       │   │                       0x804885e)
+        │   │       │   │       │   │       │   │       │   │       │   └── 0x8048829 <ignore_me+0xc1> (via FakeRet) -> (ref 0x8048829)
+        │   │       │   │       │   │       │   │       │   │       └── 0x804883b <ignore_me+0xd3> (via Ret) -> (ref 0x804883b)
+        │   │       │   │       │   │       │   │       │   └── 0x8048812 <ignore_me+0xaa> (via FakeRet) -> (ref 0x8048812)
+        │   │       │   │       │   │       │   │       └── 0x8048850 <ignore_me+0xe8> (via Ret) -> (ref 0x8048850)
+        │   │       │   │       │   │       │   └── 0x8048800 <ignore_me+0x98> (via FakeRet) -> (ref 0x8048800)
+        │   │       │   │       │   │       └── 0x80488fc <main+0x82> (via Ret) -> (ref 0x80488fc)
+        │   │       │   │       │   └── 0x80487e9 <ignore_me+0x81> (via FakeRet) -> (ref 0x80487e9)
+        │   │       │   │       └── 0x8048939 <main+0xbf> (via Ret) -> (ref 0x8048939)
+        │   │       │   └── 0x80487d4 <ignore_me+0x6c> (via FakeRet) -> (ref 0x80487d4)
+        │   │       ├── 0x804889c <main+0x22> (via Ret)
+        │   │       │   ├── 0x80484f0 <block> (via Call)
+        │   │       │   │   └── 0x8100000 <printf> (via Boring)
+        │   │       │   │       ├── 0x8048703 <print_msg+0x18> (via Ret)
+        │   │       │   │       └── 0x80488ac <main+0x32> (via Ret)
+        │   │       │   │           ├── 0x80485c0 <block> (via Call)
+        │   │       │   │           │   └── 0x8100034 <__isoc99_scanf> (via Boring)
+        │   │       │   │           │       └── 0x80488c1 <main+0x47> (via Ret)
+        │   │       │   │           │           ├── 0x8048768 <ignore_me> (via Call)
+        │   │       │   │           │           │   ├── 0x80485b0 <block> (via Call) -> (ref 0x80485b0)
+        │   │       │   │           │           │   └── 0x80487c4 <ignore_me+0x5c> (via FakeRet) -> (ref 0x80487c4)
+        │   │       │   │           │           └── 0x80488d3 <main+0x59> (via FakeRet) -> (ref 0x80488d3)
+        │   │       │   │           └── 0x80488c1 <main+0x47> (via FakeRet) -> (ref 0x80488c1)
+        │   │       │   └── 0x80488ac <main+0x32> (via FakeRet) -> (ref 0x80488ac)
+        │   │       └── 0x80488e7 <main+0x6d> (via Ret) -> (ref 0x80488e7)
+        │   └── 0x804889c <main+0x22> (via FakeRet) -> (ref 0x804889c)
+        ├── 0x80489d0 <__libc_csu_init> (via Call)
+        │   ├── 0x8048620 <__x86.get_pc_thunk.bx> (via Call)
+        │   │   ├── 0x80484c5 <_init+0x9> (via Ret)
+        │   │   │   ├── 0x80484d5 <_init+0x19> (via Boring)
+        │   │   │   │   ├── 0x80484da <_init+0x1e> (via FakeRet)
+        │   │   │   │   │   └── 0x80489f1 <__libc_csu_init+0x21> (via Ret)
+        │   │   │   │   │       ├── 0x8048a00 <__libc_csu_init+0x30> (via Boring)
+        │   │   │   │   │       │   └── 0x8048a08 <__libc_csu_init+0x38> (via Boring)
+        │   │   │   │   │       │       ├── 0x8048a1b <__libc_csu_init+0x4b> (via FakeRet)
+        │   │   │   │   │       │       │   ├── 0x8048a08 <__libc_csu_init+0x38> (via Boring) -> (ref 0x8048a08)
+        │   │   │   │   │       │       │   └── 0x8048a25 <__libc_csu_init+0x55> (via Boring)
+        │   │   │   │   │       │       └── 0x8201050 <UnresolvableCallTarget> (via Call)
+        │   │   │   │   │       └── 0x8048a25 <__libc_csu_init+0x55> (via Boring) -> (ref 0x8048a25)
+        │   │   │   │   └── 0x80485e0 <block> (via Call)
+        │   │   │   │       └── 0x820104c <UnresolvableJumpTarget> (via Boring)
+        │   │   │   └── 0x80484da <_init+0x1e> (via Boring) -> (ref 0x80484da)
+        │   │   ├── 0x80489d9 <__libc_csu_init+0x9> (via Ret)
+        │   │   │   ├── 0x80484bc <_init> (via Call)
+        │   │   │   │   ├── 0x80484c5 <_init+0x9> (via FakeRet) -> (ref 0x80484c5)
+        │   │   │   │   └── 0x8048620 <__x86.get_pc_thunk.bx> (via Call) -> (ref 0x8048620)
+        │   │   │   └── 0x80489f1 <__libc_csu_init+0x21> (via FakeRet) -> (ref 0x80489f1)
+        │   │   └── 0x8048a3d <_fini+0x9> (via Ret)
+        │   └── 0x80489d9 <__libc_csu_init+0x9> (via FakeRet) -> (ref 0x80489d9)
+        └── 0x8048a30 <__libc_csu_fini> (via Call)
+
+

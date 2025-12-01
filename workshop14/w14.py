@@ -1,107 +1,121 @@
 """
-COMP-5710 Workshop 14: ANGR
+COMP-5710 Workshop 14: ANGR Binary Analysis
 Author: Jacob Murrah
 Date: 12/5/2025
 """
 
 import angr
 import os
+import io
+import sys
+import logging
 from pathlib import Path
 from rich.tree import Tree
 from rich.console import Console
 
+logging.getLogger("angr").setLevel(logging.CRITICAL)
+sys.setrecursionlimit(10000)
+
 BINARY_DIR = Path("binaries")
-
-def write_graph_metric_outputs_to_file(file_path, cfg_metrics):
-    print("hello")
-        
-
-def try1(graph):
-    lines = []
-    for src, dst in graph.edges:
-        # src and dst are CFGNode-like; .addr is the basic block address
-        lines.append(f"{hex(src.addr)} -> {hex(dst.addr)}")
-    cfg_text = "\n".join(lines)
-    print("=== Control Flow Graph (Edge List) ===")
-    print(cfg_text)
-
-def try2(cfg):
-    print("=== Control Flow Graph (Text Format) ===")
-    
-    # Sort nodes by address so the output is linear and readable
-    # angr CFG nodes are objects, so we sort by their .addr property
-    print(dir(cfg.graph.nodes))
-    sorted_nodes = sorted(cfg.graph.nodes, key=lambda n: n.addr)
-
-    for node in sorted_nodes:
-        # Get the function name if available, otherwise just use the address
-        name = node.name if node.name else "unknown_block"
-        print(f"[{hex(node.addr)}] <{name}> (Size: {node.size})")
-
-        # Get successors (children) of this node
-        successors = list(cfg.graph.successors(node))
-        
-        if not successors:
-            print("    --> (Terminal Block / No known successors)")
-        
-        for succ in successors:
-            # We look up edge data to find out *how* we get there (Jump, Call, Ret)
-            edge_data = cfg.graph.get_edge_data(node, succ)
-            jump_kind = edge_data.get('jumpkind', 'Ijk_Boring') # 'Ijk_Boring' is a standard jump
-            
-            print(f"    --> {jump_kind} to {hex(succ.addr)}")
-        
-        # Add a newline for separation
-        print("")
+RESULTS_DIR = Path("results")
 
 
-def create_text_formatted_control_flow_graph(graph):
-    try1(graph.graph)
+def write_cfg_metrics_binary_result(cfg_metrics):
+    filename = RESULTS_DIR / f"{cfg_metrics['binary_name']}_results.txt"
 
-    print("GVBFKUWGWDOHDOIWKHDIOWUJDPOWUDHIOUWDHWIODHWOIUDHWOIDUHWOIUDWHODHOWD")
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("=" * 60 + "\n")
+        f.write(f"Results for Binary File: {cfg_metrics['binary_name']}\n")
+        f.write("=" * 60 + "\n")
 
-    try2(graph)
+        f.write(f"Number of Nodes: {cfg_metrics['num_nodes']}\n")
+        f.write(f"Number of Edges: {cfg_metrics['num_edges']}\n")
+        f.write(f"Heap Base Memory Address: {hex(cfg_metrics['heap_mem_addr'])}\n\n")
 
-def get_crontrol_flow_graph_metrics(project):
+        f.write("--- Memory Ranges ---\n")
+        for mem in cfg_metrics["memory_ranges"]:
+            obj_name = os.path.basename(mem["object"].binary)
+            f.write(
+                f"{obj_name:<15} : {hex(mem['min_addr'])} - {hex(mem['max_addr'])}\n"
+            )
+
+        f.write("\n--- Control Flow Graph Visualization ---\n")
+        f.write(cfg_metrics["text_cfg"])
+        f.write("\n\n")
+
+    print(f"   - Number of Nodes: {cfg_metrics['num_nodes']}")
+    print(f"   - Number of Edges: {cfg_metrics['num_edges']}")
+    print(f"   - Heap Base Memory Address: {hex(cfg_metrics['heap_mem_addr'])}")
+    print(f"   - Memory Ranges:")
+    for mem in cfg_metrics["memory_ranges"]:
+        obj_name = os.path.basename(mem["object"].binary)
+        print(
+            f"       {obj_name:<15} : {hex(mem['min_addr'])} - {hex(mem['max_addr'])}"
+        )
+    print(f"   - Saved result to {filename}")
+
+
+def build_rich_tree(cfg, node, tree, global_visited):
+    successors = sorted(list(cfg.graph.successors(node)), key=lambda n: n.addr)
+    for succ in successors:
+        edge_data = cfg.graph.get_edge_data(node, succ)
+        jump_kind = edge_data.get("jumpkind", "Boring").replace("Ijk_", "")
+
+        func_name = succ.name if succ.name else "block"
+        label = f"{hex(succ.addr)} <{func_name}> (via {jump_kind})"
+
+        if succ in global_visited:
+            tree.add(f"{label} -> (ref {hex(succ.addr)})")
+        else:
+            global_visited.add(succ)
+            branch = tree.add(label)
+            build_rich_tree(cfg, succ, branch, global_visited)
+
+
+def create_cfg_visualization(cfg, project):
+    entry_node = cfg.model.get_any_node(project.entry)
+    root = Tree(f"{hex(entry_node.addr)} <{entry_node.name}>")
+
+    build_rich_tree(cfg, entry_node, root, global_visited={entry_node})
+
+    console = Console(file=io.StringIO(), width=150, no_color=True, highlight=True)
+    console.print(root)
+
+    return console.file.getvalue()
+
+
+def get_control_flow_graph_metrics(project, binary_path):
     metrics = {}
-    graph_cfgfast = project.analyses.CFGFast()
-    graph = graph_cfgfast.graph
-
-    metrics["text_cfg"] = create_text_formatted_control_flow_graph(graph_cfgfast)
-    metrics["num_nodes"] = len(graph.nodes)
-    metrics["num_edges"] = len(graph.edges)
-
-    print(len(project.loader.all_objects))
     memory_ranges = []
-    for object in project.loader.all_objects:
-        # print(object)
-        # print(dir(object))
-        
-        min_addr = object.min_addr
-        max_addr = object.max_addr
 
-        memory_ranges.append({
-            "object": object,
-            "min_addr": min_addr,
-            "max_addr": max_addr,
-            "range": (min_addr, max_addr)
-        })
-    
+    cfg = project.analyses.CFGFast(normalize=True)
+    for obj in project.loader.all_objects:
+        memory_ranges.append(
+            {"object": obj, "min_addr": obj.min_addr, "max_addr": obj.max_addr}
+        )
+
+    metrics["binary_name"] = binary_path.name
+    metrics["num_nodes"] = len(cfg.graph.nodes)
+    metrics["num_edges"] = len(cfg.graph.edges)
+    metrics["text_cfg"] = create_cfg_visualization(cfg, project)
     metrics["memory_ranges"] = memory_ranges
     metrics["heap_mem_addr"] = project.factory.entry_state().heap.heap_base
 
     return metrics
-    
+
 
 def main():
-    binary_metric_outputs = []
-    for binary_path in BINARY_DIR.iterdir():
-        angr_proj = angr.Project(str(binary_path), auto_load_libs=False)
-        binary_metric_outputs.append(get_crontrol_flow_graph_metrics(angr_proj))
-        break
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    print("-" * 60)
 
-    write_graph_metric_outputs_to_file("text_results.txt", binary_metric_outputs)
-    
+    for binary_path in BINARY_DIR.iterdir():
+        print(f"Processing Binary File: {binary_path.name}")
+        angr_proj = angr.Project(str(binary_path), auto_load_libs=False)
+        cfg_metrics = get_control_flow_graph_metrics(angr_proj, binary_path)
+        write_cfg_metrics_binary_result(cfg_metrics)
+        print("-" * 60)
+
+    print(f"\nResults are saved to: {RESULTS_DIR.resolve()}\n")
 
 
 if __name__ == "__main__":

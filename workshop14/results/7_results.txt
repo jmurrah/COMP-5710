@@ -1,0 +1,121 @@
+============================================================
+Results for Binary File: 7
+============================================================
+Number of Nodes: 107
+Number of Edges: 145
+Heap Base Memory Address: 0xc0000000
+
+--- Memory Ranges ---
+7               : 0x8048000 - 0x804a06b
+cle##externs    : 0x8100000 - 0x8100018
+cle##externs    : 0x8200000 - 0x8207fff
+cle##tls        : 0x8300000 - 0x8314807
+cle##kernel     : 0x8400000 - 0x8407fff
+
+--- Control Flow Graph Visualization ---
+0x8048430 <_start>
+└── 0x80483e0 <block> (via Call)
+    └── 0x810000c <__libc_start_main> (via Boring)
+        ├── 0x80485f3 <main> (via Call)
+        │   ├── 0x80483f0 <block> (via Call)
+        │   │   └── 0x8100010 <memset> (via Boring)
+        │   │       └── 0x804863d <main+0x4a> (via Ret)
+        │   │           ├── 0x80483b0 <block> (via Call)
+        │   │           │   └── 0x8100000 <printf> (via Boring)
+        │   │           │       ├── 0x8048543 <print_msg+0x18> (via Ret)
+        │   │           │       └── 0x804864d <main+0x5a> (via Ret)
+        │   │           │           ├── 0x8048400 <block> (via Call)
+        │   │           │           │   └── 0x8100014 <__isoc99_scanf> (via Boring)
+        │   │           │           │       ├── 0x8048662 <main+0x6f> (via Ret)
+        │   │           │           │       │   └── 0x80486a3 <main+0xb0> (via Boring)
+        │   │           │           │       │       ├── 0x804866e <main+0x7b> (via Boring)
+        │   │           │           │       │       │   ├── 0x8048549 <complex_function> (via Call)
+        │   │           │           │       │       │   │   ├── 0x8048555 <complex_function+0xc> (via Boring)
+        │   │           │           │       │       │   │   │   ├── 0x804855b <complex_function+0x12> (via Boring)
+        │   │           │           │       │       │   │   │   │   ├── 0x80483c0 <block> (via Call)
+        │   │           │           │       │       │   │   │   │   │   └── 0x8100004 <puts> (via Boring)
+        │   │           │           │       │       │   │   │   │   │       ├── 0x8048568 <complex_function+0x1f> (via Ret)
+        │   │           │           │       │       │   │   │   │   │       │   └── 0x80483d0 <block> (via Call)
+        │   │           │           │       │       │   │   │   │   │       │       └── 0x8100008 <exit> (via Boring)
+        │   │           │           │       │       │   │   │   │   │       ├── 0x8048760 <main+0x16d> (via Ret)
+        │   │           │           │       │       │   │   │   │   │       │   └── 0x8048775 <main+0x182> (via Boring)
+        │   │           │           │       │       │   │   │   │   │       └── 0x8048772 <main+0x17f> (via Ret)
+        │   │           │           │       │       │   │   │   │   │           └── 0x8048775 <main+0x182> (via Boring) -> (ref 0x8048775)
+        │   │           │           │       │       │   │   │   │   └── 0x8048568 <complex_function+0x1f> (via FakeRet) -> (ref 0x8048568)
+        │   │           │           │       │       │   │   │   └── 0x8048575 <complex_function+0x2c> (via Boring)
+        │   │           │           │       │       │   │   │       ├── 0x8048690 <main+0x9d> (via Ret)
+        │   │           │           │       │       │   │   │       │   └── 0x80486a3 <main+0xb0> (via Boring) -> (ref 0x80486a3)
+        │   │           │           │       │       │   │   │       └── 0x80486e7 <main+0xf4> (via Ret)
+        │   │           │           │       │       │   │   │           └── 0x80486fa <main+0x107> (via Boring)
+        │   │           │           │       │       │   │   │               ├── 0x80486c9 <main+0xd6> (via Boring)
+        │   │           │           │       │       │   │   │               │   ├── 0x8048549 <complex_function> (via Call) -> (ref 0x8048549)
+        │   │           │           │       │       │   │   │               │   └── 0x80486e7 <main+0xf4> (via FakeRet) -> (ref 0x80486e7)
+        │   │           │           │       │       │   │   │               └── 0x8048700 <main+0x10d> (via Boring)
+        │   │           │           │       │       │   │   │                   ├── 0x8048400 <block> (via Call) -> (ref 0x8048400)
+        │   │           │           │       │       │   │   │                   └── 0x8048712 <main+0x11f> (via FakeRet)
+        │   │           │           │       │       │   │   │                       ├── 0x804871e <main+0x12b> (via Boring)
+        │   │           │           │       │       │   │   │                       │   ├── 0x8048410 <block> (via Call)
+        │   │           │           │       │       │   │   │                       │   │   └── 0x8100018 <strncmp> (via Boring)
+        │   │           │           │       │       │   │   │                       │   │       └── 0x8048732 <main+0x13f> (via Ret)
+        │   │           │           │       │       │   │   │                       │   │           ├── 0x8048739 <main+0x146> (via Boring)
+        │   │           │           │       │       │   │   │                       │   │           │   └── 0x8048745 <main+0x152> (via Boring)
+        │   │           │           │       │       │   │   │                       │   │           │       ├── 0x8048753 <main+0x160> (via Boring)
+        │   │           │           │       │       │   │   │                       │   │           │       │   ├── 0x80483c0 <block> (via Call) -> 
+        │   │           │           │       │       │   │   │                       │   │           │       │   │   (ref 0x80483c0)
+        │   │           │           │       │       │   │   │                       │   │           │       │   └── 0x8048760 <main+0x16d> (via 
+        │   │           │           │       │       │   │   │                       │   │           │       │       FakeRet) -> (ref 0x8048760)
+        │   │           │           │       │       │   │   │                       │   │           │       └── 0x8048765 <main+0x172> (via Boring)
+        │   │           │           │       │       │   │   │                       │   │           │           ├── 0x80483c0 <block> (via Call) -> 
+        │   │           │           │       │       │   │   │                       │   │           │           │   (ref 0x80483c0)
+        │   │           │           │       │       │   │   │                       │   │           │           └── 0x8048772 <main+0x17f> (via 
+        │   │           │           │       │       │   │   │                       │   │           │               FakeRet) -> (ref 0x8048772)
+        │   │           │           │       │       │   │   │                       │   │           └── 0x8048740 <main+0x14d> (via Boring)
+        │   │           │           │       │       │   │   │                       │   │               └── 0x8048745 <main+0x152> (via Boring) -> 
+        │   │           │           │       │       │   │   │                       │   │                   (ref 0x8048745)
+        │   │           │           │       │       │   │   │                       │   └── 0x8048732 <main+0x13f> (via FakeRet) -> (ref 0x8048732)
+        │   │           │           │       │       │   │   │                       └── 0x8048740 <main+0x14d> (via Boring) -> (ref 0x8048740)
+        │   │           │           │       │       │   │   └── 0x804855b <complex_function+0x12> (via Boring) -> (ref 0x804855b)
+        │   │           │           │       │       │   └── 0x8048690 <main+0x9d> (via FakeRet) -> (ref 0x8048690)
+        │   │           │           │       │       └── 0x80486a9 <main+0xb6> (via Boring)
+        │   │           │           │       │           ├── 0x80485a5 <check_equals_XYMKBKUHNIQYNQXE> (via Call)
+        │   │           │           │       │           │   └── 0x80485dd <check_equals_XYMKBKUHNIQYNQXE+0x38> (via Boring)
+        │   │           │           │       │           │       ├── 0x80485bb <check_equals_XYMKBKUHNIQYNQXE+0x16> (via Boring)
+        │   │           │           │       │           │       │   ├── 0x80485d5 <check_equals_XYMKBKUHNIQYNQXE+0x30> (via Boring)
+        │   │           │           │       │           │       │   │   └── 0x80485d9 <check_equals_XYMKBKUHNIQYNQXE+0x34> (via Boring)
+        │   │           │           │       │           │       │   │       └── 0x80485dd <check_equals_XYMKBKUHNIQYNQXE+0x38> (via Boring) -> (ref 
+        │   │           │           │       │           │       │   │           0x80485dd)
+        │   │           │           │       │           │       │   └── 0x80485d9 <check_equals_XYMKBKUHNIQYNQXE+0x34> (via Boring) -> (ref 0x80485d9)
+        │   │           │           │       │           │       └── 0x80485e5 <check_equals_XYMKBKUHNIQYNQXE+0x40> (via Boring)
+        │   │           │           │       │           │           └── 0x80486b8 <main+0xc5> (via Ret)
+        │   │           │           │       │           │               └── 0x80486fa <main+0x107> (via Boring) -> (ref 0x80486fa)
+        │   │           │           │       │           └── 0x80486b8 <main+0xc5> (via FakeRet) -> (ref 0x80486b8)
+        │   │           │           │       └── 0x8048712 <main+0x11f> (via Ret) -> (ref 0x8048712)
+        │   │           │           └── 0x8048662 <main+0x6f> (via FakeRet) -> (ref 0x8048662)
+        │   │           └── 0x804864d <main+0x5a> (via FakeRet) -> (ref 0x804864d)
+        │   └── 0x804863d <main+0x4a> (via FakeRet) -> (ref 0x804863d)
+        ├── 0x8048790 <__libc_csu_init> (via Call)
+        │   ├── 0x8048460 <__x86.get_pc_thunk.bx> (via Call)
+        │   │   ├── 0x8048379 <_init+0x9> (via Ret)
+        │   │   │   ├── 0x8048389 <_init+0x19> (via Boring)
+        │   │   │   │   ├── 0x804838e <_init+0x1e> (via FakeRet)
+        │   │   │   │   │   └── 0x80487b1 <__libc_csu_init+0x21> (via Ret)
+        │   │   │   │   │       ├── 0x80487c0 <__libc_csu_init+0x30> (via Boring)
+        │   │   │   │   │       │   └── 0x80487c8 <__libc_csu_init+0x38> (via Boring)
+        │   │   │   │   │       │       ├── 0x80487db <__libc_csu_init+0x4b> (via FakeRet)
+        │   │   │   │   │       │       │   ├── 0x80487c8 <__libc_csu_init+0x38> (via Boring) -> (ref 0x80487c8)
+        │   │   │   │   │       │       │   └── 0x80487e5 <__libc_csu_init+0x55> (via Boring)
+        │   │   │   │   │       │       └── 0x8201050 <UnresolvableCallTarget> (via Call)
+        │   │   │   │   │       └── 0x80487e5 <__libc_csu_init+0x55> (via Boring) -> (ref 0x80487e5)
+        │   │   │   │   └── 0x8048420 <block> (via Call)
+        │   │   │   │       └── 0x820104c <UnresolvableJumpTarget> (via Boring)
+        │   │   │   └── 0x804838e <_init+0x1e> (via Boring) -> (ref 0x804838e)
+        │   │   ├── 0x8048799 <__libc_csu_init+0x9> (via Ret)
+        │   │   │   ├── 0x8048370 <_init> (via Call)
+        │   │   │   │   ├── 0x8048379 <_init+0x9> (via FakeRet) -> (ref 0x8048379)
+        │   │   │   │   └── 0x8048460 <__x86.get_pc_thunk.bx> (via Call) -> (ref 0x8048460)
+        │   │   │   └── 0x80487b1 <__libc_csu_init+0x21> (via FakeRet) -> (ref 0x80487b1)
+        │   │   └── 0x80487fd <_fini+0x9> (via Ret)
+        │   └── 0x8048799 <__libc_csu_init+0x9> (via FakeRet) -> (ref 0x8048799)
+        └── 0x80487f0 <__libc_csu_fini> (via Call)
+
+

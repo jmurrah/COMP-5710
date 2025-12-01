@@ -1,0 +1,71 @@
+============================================================
+Results for Binary File: 1
+============================================================
+Number of Nodes: 74
+Number of Edges: 98
+Heap Base Memory Address: 0xc0000000
+
+--- Memory Ranges ---
+1               : 0x8048000 - 0x484f6043
+cle##externs    : 0x48500000 - 0x4850000c
+cle##externs    : 0x48600000 - 0x48607fff
+cle##tls        : 0x48700000 - 0x48714807
+cle##kernel     : 0x48800000 - 0x48807fff
+
+--- Control Flow Graph Visualization ---
+0x80483b0 <_start>
+└── 0x8048380 <block> (via Call)
+    └── 0x48500008 <__libc_start_main> (via Boring)
+        ├── 0x80484c9 <main> (via Call)
+        │   ├── 0x8048360 <block> (via Call)
+        │   │   └── 0x48500000 <printf> (via Boring)
+        │   │       ├── 0x80484c3 <print_msg+0x18> (via Ret)
+        │   │       └── 0x80484ef <main+0x26> (via Ret)
+        │   │           ├── 0x8048390 <block> (via Call)
+        │   │           │   └── 0x4850000c <__isoc99_scanf> (via Boring)
+        │   │           │       └── 0x8048508 <main+0x3f> (via Ret)
+        │   │           │           ├── 0x8048517 <main+0x4e> (via Boring)
+        │   │           │           │   ├── 0x804851e <main+0x55> (via Boring)
+        │   │           │           │   │   ├── 0x8048370 <block> (via Call)
+        │   │           │           │   │   │   └── 0x48500004 <puts> (via Boring)
+        │   │           │           │   │   │       ├── 0x804852a <main+0x61> (via Ret)
+        │   │           │           │   │   │       │   └── 0x8048553 <main+0x8a> (via Boring)
+        │   │           │           │   │   │       ├── 0x804853d <main+0x74> (via Ret)
+        │   │           │           │   │   │       │   └── 0x8048553 <main+0x8a> (via Boring) -> (ref 0x8048553)
+        │   │           │           │   │   │       └── 0x8048550 <main+0x87> (via Ret)
+        │   │           │           │   │   │           └── 0x8048553 <main+0x8a> (via Boring) -> (ref 0x8048553)
+        │   │           │           │   │   └── 0x804852a <main+0x61> (via FakeRet) -> (ref 0x804852a)
+        │   │           │           │   └── 0x8048542 <main+0x79> (via Boring)
+        │   │           │           │       ├── 0x8048370 <block> (via Call) -> (ref 0x8048370)
+        │   │           │           │       └── 0x8048550 <main+0x87> (via FakeRet) -> (ref 0x8048550)
+        │   │           │           └── 0x804852f <main+0x66> (via Boring)
+        │   │           │               ├── 0x8048370 <block> (via Call) -> (ref 0x8048370)
+        │   │           │               └── 0x804853d <main+0x74> (via FakeRet) -> (ref 0x804853d)
+        │   │           └── 0x8048508 <main+0x3f> (via FakeRet) -> (ref 0x8048508)
+        │   └── 0x80484ef <main+0x26> (via FakeRet) -> (ref 0x80484ef)
+        ├── 0x8048570 <__libc_csu_init> (via Call)
+        │   ├── 0x80483e0 <__x86.get_pc_thunk.bx> (via Call)
+        │   │   ├── 0x8048335 <_init+0x9> (via Ret)
+        │   │   │   ├── 0x8048345 <_init+0x19> (via Boring)
+        │   │   │   │   ├── 0x804834a <_init+0x1e> (via FakeRet)
+        │   │   │   │   │   └── 0x8048591 <__libc_csu_init+0x21> (via Ret)
+        │   │   │   │   │       ├── 0x80485a0 <__libc_csu_init+0x30> (via Boring)
+        │   │   │   │   │       │   └── 0x80485a8 <__libc_csu_init+0x38> (via Boring)
+        │   │   │   │   │       │       ├── 0x80485bb <__libc_csu_init+0x4b> (via FakeRet)
+        │   │   │   │   │       │       │   ├── 0x80485a8 <__libc_csu_init+0x38> (via Boring) -> (ref 0x80485a8)
+        │   │   │   │   │       │       │   └── 0x80485c5 <__libc_csu_init+0x55> (via Boring)
+        │   │   │   │   │       │       └── 0x48601050 <UnresolvableCallTarget> (via Call)
+        │   │   │   │   │       └── 0x80485c5 <__libc_csu_init+0x55> (via Boring) -> (ref 0x80485c5)
+        │   │   │   │   └── 0x80483a0 <block> (via Call)
+        │   │   │   │       └── 0x4860104c <UnresolvableJumpTarget> (via Boring)
+        │   │   │   └── 0x804834a <_init+0x1e> (via Boring) -> (ref 0x804834a)
+        │   │   ├── 0x8048579 <__libc_csu_init+0x9> (via Ret)
+        │   │   │   ├── 0x804832c <_init> (via Call)
+        │   │   │   │   ├── 0x8048335 <_init+0x9> (via FakeRet) -> (ref 0x8048335)
+        │   │   │   │   └── 0x80483e0 <__x86.get_pc_thunk.bx> (via Call) -> (ref 0x80483e0)
+        │   │   │   └── 0x8048591 <__libc_csu_init+0x21> (via FakeRet) -> (ref 0x8048591)
+        │   │   └── 0x80485dd <_fini+0x9> (via Ret)
+        │   └── 0x8048579 <__libc_csu_init+0x9> (via FakeRet) -> (ref 0x8048579)
+        └── 0x80485d0 <__libc_csu_fini> (via Call)
+
+
